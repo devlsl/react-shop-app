@@ -70,8 +70,9 @@ export function Header() {
             fontSize: '18px'
           }}
         >
-          <div>Каталог</div>
-          <div>Отследить заказ</div>
+          <NavLink to="/">Каталог</NavLink>
+          <NavLink to="about">Отследить заказ</NavLink>
+          {/* <div>Отследить заказ</div> */}
         </NavBarItem>
 
         <NavBarItem

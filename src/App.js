@@ -1,21 +1,30 @@
-import styled from 'styled-components'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Cards from './components/Cards'
-import { Header } from './components/Header'
-import { Container } from './components/UI/Container'
+import { Layout } from './components/Layout'
+import { Aboutpage } from './pages/Aboutpage'
 
-const AppWrapper = styled.div`
-  min-height: 100vh;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-`
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Cards />
+      },
+      {
+        path: 'about',
+        element: <Aboutpage />
+      }
+    ]
+  }
+])
 
 function App() {
   return (
-    <Container>
-      <AppWrapper>
-        <Header />
-        <Cards />
-      </AppWrapper>
-    </Container>
+    <>
+      <RouterProvider router={router} />
+    </>
   )
 }
 
