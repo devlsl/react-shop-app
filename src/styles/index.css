@@ -7,7 +7,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: 'Rubik', sans-serif;
 }
+
+/* Временные стили */
+/* div {
+  border: 1px solid red;
+  padding: 4px;
+  margin: 4px;
+}
+
+#root {
+  border: none;
+  padding: 0;
+  margin: 0;
+} */
+/* Временные стили */
