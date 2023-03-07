@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Card } from './Card'
+import { Card } from '../components/Card'
 
 const CardsWrapper = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const CardsWrapper = styled.div`
   justify-content: space-evenly;
 `
 
-function Cards() {
+function Catalogpage() {
   return (
     <CardsWrapper>
       <Card path="/img/sneakers/1.jpeg" title="Кроссовки Nike" price={11990} />
@@ -27,4 +27,4 @@ function Cards() {
   )
 }
 
-export default Cards
+export { Catalogpage }

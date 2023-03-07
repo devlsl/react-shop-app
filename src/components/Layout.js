@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `
 
-const Layout = () => {
+export function Layout() {
   return (
     <>
       <Container>
@@ -20,5 +20,3 @@ const Layout = () => {
     </>
   )
 }
-
-export { Layout }

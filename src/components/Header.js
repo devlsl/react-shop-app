@@ -1,9 +1,10 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { NavBarItem } from './UI/NavBarItem'
 import { UserBarItem } from './UI/UserBarItem'
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { HiOutlineUserCircle } from 'react-icons/hi'
+import { useState } from 'react'
 
 const StyledHeader = styled.div`
   display: flex;
@@ -13,6 +14,15 @@ const StyledHeader = styled.div`
   margin: 0;
 
   border-bottom: 2px solid #f3f3f3;
+
+  a {
+    color: rgba(0, 0, 0, 0.57);
+
+    &.active,
+    :hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
 `
 
 const InfoWrapper = styled.div`
@@ -50,6 +60,9 @@ const HeadingsWrapper = styled.div`
 `
 
 export function Header() {
+  const [cartIsOpened, setCartIsOpened] = useState(false)
+  console.log('render', cartIsOpened)
+
   return (
     <StyledHeader>
       <InfoWrapper>
@@ -66,13 +79,11 @@ export function Header() {
           gap="30px"
           style={{
             fontWeight: '400',
-            color: 'rgba(0, 0, 0, 0.7)',
             fontSize: '18px'
           }}
         >
           <NavLink to="/">Каталог</NavLink>
-          <NavLink to="about">Отследить заказ</NavLink>
-          {/* <div>Отследить заказ</div> */}
+          <NavLink to="tracking">Отследить заказ</NavLink>
         </NavBarItem>
 
         <NavBarItem
@@ -84,8 +95,13 @@ export function Header() {
           }}
         >
           <UserBarItem gap="4px">
-            <RiShoppingCart2Line opacity={0.7} size={21} />
-            <span>1205 Руб.</span>
+            {/* открыть модальное окно */}
+
+            <button onClick={() => setCartIsOpened((prev) => !prev)}>
+              <RiShoppingCart2Line opacity={0.7} size={21} />
+              <span>1205 Руб.</span>
+            </button>
+            {/*  */}
           </UserBarItem>
           <UserBarItem>
             <HiOutlineUserCircle opacity={0.7} size={21} />
