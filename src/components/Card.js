@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Button } from './UI/Button'
 import { AiOutlinePlus } from 'react-icons/ai'
-import { useState } from 'react'
 
 const StyledCard = styled.div`
   border: 2px solid #f3f3f3;

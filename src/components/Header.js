@@ -4,7 +4,8 @@ import { NavBarItem } from './UI/NavBarItem'
 import { UserBarItem } from './UI/UserBarItem'
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { HiOutlineUserCircle } from 'react-icons/hi'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { CartContext } from '../context/CartContext'
 
 const StyledHeader = styled.div`
   display: flex;
@@ -60,8 +61,11 @@ const HeadingsWrapper = styled.div`
 `
 
 export function Header() {
-  const [cartIsOpened, setCartIsOpened] = useState(false)
-  console.log('render', cartIsOpened)
+  const { cartIsOpen, openCart, setCartOpen } = useContext(CartContext)
+
+  useEffect(() => {
+    console.log('cartIsOpen changed (msg from Header)')
+  }, [cartIsOpen])
 
   return (
     <StyledHeader>
@@ -94,15 +98,12 @@ export function Header() {
             fontSize: '16px'
           }}
         >
-          <UserBarItem gap="4px">
-            {/* открыть модальное окно */}
-
-            <button onClick={() => setCartIsOpened((prev) => !prev)}>
+          <button onClick={() => setCartOpen((prev) => !prev)}>
+            <UserBarItem gap="4px">
               <RiShoppingCart2Line opacity={0.7} size={21} />
               <span>1205 Руб.</span>
-            </button>
-            {/*  */}
-          </UserBarItem>
+            </UserBarItem>
+          </button>
           <UserBarItem>
             <HiOutlineUserCircle opacity={0.7} size={21} />
           </UserBarItem>
