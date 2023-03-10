@@ -3,7 +3,7 @@ import { Catalogpage } from './pages/Catalogpage'
 import { Layout } from './components/Layout'
 import { Trackingpage } from './pages/Trackingpage'
 import { Notfoundpage } from './pages/Notfoundpage'
-import { Cartpage } from './pages/Cartpage'
+import { Orderspage } from './pages/Orderspage'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: 'tracking',
         element: <Trackingpage />
+      },
+      {
+        path: 'orders',
+        element: <Orderspage />
       },
       {
         path: '*',

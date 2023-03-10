@@ -4,7 +4,10 @@ import { Cart } from './Cart'
 import { Header } from './Header'
 import { Container } from './UI/Container'
 import { CartContext } from '../context/CartContext'
-import { useState } from 'react'
+import { useEffect } from 'react'
+import { useCart } from '../hooks/useCart'
+import { useFavorites } from '../hooks/useFavorites'
+import { FavoritesContext } from '../context/FavoritesContext'
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -12,22 +15,28 @@ const Wrapper = styled.div`
 `
 
 export function Layout() {
-  const [cartIsOpen, setCartOpen] = useState(false)
-  const openCart = () => setCartOpen(true)
-  const closeCart = () => setCartOpen(false)
+  const cart = useCart()
+  const favorites = useFavorites()
+
+  useEffect(() => {
+    console.log(cart.purchases)
+  }, [cart.purchases])
+
+  useEffect(() => {
+    console.log(favorites.items)
+  }, [favorites.items])
 
   return (
     <>
       <Container>
         <Wrapper>
-          <CartContext.Provider
-            value={{ cartIsOpen, setCartOpen, openCart, closeCart }}
-          >
-            <Header />
-
-            <Cart />
+          <CartContext.Provider value={{ ...cart }}>
+            <FavoritesContext.Provider value={{ ...favorites }}>
+              <Header />
+              <Cart />
+              <Outlet />
+            </FavoritesContext.Provider>
           </CartContext.Provider>
-          <Outlet />
         </Wrapper>
       </Container>
     </>

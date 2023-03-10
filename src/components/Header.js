@@ -1,10 +1,9 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { NavBarItem } from './UI/NavBarItem'
-import { UserBarItem } from './UI/UserBarItem'
+import { RowBox } from './UI/RowBox'
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { HiOutlineUserCircle } from 'react-icons/hi'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 
 const StyledHeader = styled.div`
@@ -22,6 +21,16 @@ const StyledHeader = styled.div`
     &.active,
     :hover {
       color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .cartOpenBtn {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+
+    :hover {
+      color: rgba(0, 0, 0, 0.9);
     }
   }
 `
@@ -61,11 +70,7 @@ const HeadingsWrapper = styled.div`
 `
 
 export function Header() {
-  const { cartIsOpen, openCart, setCartOpen } = useContext(CartContext)
-
-  useEffect(() => {
-    console.log('cartIsOpen changed (msg from Header)')
-  }, [cartIsOpen])
+  const { openCart } = useContext(CartContext)
 
   return (
     <StyledHeader>
@@ -73,13 +78,13 @@ export function Header() {
         <img src="/img/logo.png" alt="logo" />
 
         <HeadingsWrapper>
-          <h2>React Sneakers</h2>
-          <h3>Интернет магазин кроссовок</h3>
+          <h2>React Shop</h2>
+          <h3>Интернет магазин</h3>
         </HeadingsWrapper>
       </InfoWrapper>
 
-      <NavBarItem gap="60px">
-        <NavBarItem
+      <RowBox gap="60px">
+        <RowBox
           gap="30px"
           style={{
             fontWeight: '400',
@@ -88,27 +93,22 @@ export function Header() {
         >
           <NavLink to="/">Каталог</NavLink>
           <NavLink to="tracking">Отследить заказ</NavLink>
-        </NavBarItem>
+        </RowBox>
 
-        <NavBarItem
-          gap="20px"
-          style={{
-            fontWeight: '500',
-            color: 'rgba(0, 0, 0, 0.8)',
-            fontSize: '16px'
-          }}
-        >
-          <button onClick={() => setCartOpen((prev) => !prev)}>
-            <UserBarItem gap="4px">
+        <RowBox gap="20px">
+          <button className="cartOpenBtn" onClick={openCart}>
+            <RowBox gap="4px">
               <RiShoppingCart2Line opacity={0.7} size={21} />
               <span>1205 Руб.</span>
-            </UserBarItem>
+            </RowBox>
           </button>
-          <UserBarItem>
-            <HiOutlineUserCircle opacity={0.7} size={21} />
-          </UserBarItem>
-        </NavBarItem>
-      </NavBarItem>
+          <NavLink to="orders">
+            <RowBox>
+              <HiOutlineUserCircle opacity={0.7} size={21} />
+            </RowBox>
+          </NavLink>
+        </RowBox>
+      </RowBox>
     </StyledHeader>
   )
 }

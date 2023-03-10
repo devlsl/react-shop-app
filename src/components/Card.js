@@ -1,6 +1,10 @@
 import styled from 'styled-components'
-import { Button } from './UI/Button'
+import { IconButton } from './UI/IconButton'
 import { AiOutlinePlus } from 'react-icons/ai'
+import { MdOutlineFavoriteBorder } from 'react-icons/md'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+import { FavoritesContext } from '../context/FavoritesContext'
 
 const StyledCard = styled.div`
   border: 2px solid #f3f3f3;
@@ -10,11 +14,15 @@ const StyledCard = styled.div`
   padding-bottom: 1.8rem;
   display: flex;
   width: 200px;
-  height: 280px;
   flex-direction: column;
   justify-content: space-around;
   cursor: pointer;
-  gap: 10px;
+  gap: 13px;
+
+  img {
+    /* height: 200px;
+    width: auto; */
+  }
 
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 
@@ -45,9 +53,17 @@ const InfoWrapper = styled.div`
   }
 `
 
-const CardFooter = styled.div``
+const CardFooter = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  gap: 5px;
+`
 
-export function Card({ path, title, price }) {
+export function Card({ id, path, title, price }) {
+  const { addToCart, isThereInCart } = useContext(CartContext)
+  const { toggleToFavorite, isThereInFavorites } = useContext(FavoritesContext)
+
   return (
     <StyledCard>
       <img src={path} alt="sneakers" />
@@ -58,7 +74,19 @@ export function Card({ path, title, price }) {
         </b>
       </InfoWrapper>
       <CardFooter>
-        <Button Icon={<AiOutlinePlus />} />
+        <IconButton
+          disabled={isThereInCart(id)}
+          onClick={() => addToCart(id)}
+          Icon={<AiOutlinePlus />}
+        />
+        <IconButton
+          onClick={() => toggleToFavorite(id)}
+          Icon={
+            <MdOutlineFavoriteBorder
+              color={isThereInFavorites(id) ? 'red' : ''}
+            />
+          }
+        />
       </CardFooter>
     </StyledCard>
   )
