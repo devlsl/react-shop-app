@@ -1,6 +1,7 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { CartContext } from '../context/CartContext'
+import { getCart } from '../serverMethods/getCart'
 import { Modal } from './UI/Modal'
 
 const StyledCartContent = styled.div`
@@ -13,14 +14,24 @@ const StyledCartContent = styled.div`
 `
 
 export function Cart() {
-  const { cartIsOpen, closeCart, purchases } = useContext(CartContext)
+  const { closeCart } = useContext(CartContext)
+  console.log('корзина отрисовалась')
+
+  // {/* // MARK!!! поменять 1 на userId когда сделаю контекст для юзера */}
+  const [temp, setTemp] = useState([])
+  useEffect(() => {
+    getCart(1).then(setTemp)
+  }, [])
 
   return (
-    <Modal isOpen={cartIsOpen} close={closeCart} uiOptions={{ stick: 'right' }}>
+    <Modal close={closeCart} uiOptions={{ stick: 'right' }}>
       <StyledCartContent>
-        {purchases.map((purchase, i) => (
-          <h1 key={i}>{purchase}</h1>
-        ))}
+        {temp &&
+          temp.map((item) => (
+            <h1 key={item.id} style={{ marginRight: '10px' }}>
+              {item.id}:{item.qty}
+            </h1>
+          ))}
       </StyledCartContent>
     </Modal>
   )

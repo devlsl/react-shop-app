@@ -2,26 +2,24 @@ import styled from 'styled-components'
 import { IconButton } from './UI/IconButton'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
-import { useContext } from 'react'
-import { CartContext } from '../context/CartContext'
+import { useContext, useState } from 'react'
 import { FavoritesContext } from '../context/FavoritesContext'
+import { addToCart } from '../serverMethods/addToCart'
 
 const StyledCard = styled.div`
   border: 2px solid #f3f3f3;
   border-radius: 40px;
   border-radius: 40px;
   padding: 1rem;
-  padding-bottom: 1.8rem;
   display: flex;
-  width: 200px;
+  width: 250px;
   flex-direction: column;
   justify-content: space-around;
-  cursor: pointer;
-  gap: 13px;
+  /* cursor: pointer; */
+  gap: 4px;
 
-  img {
-    /* height: 200px;
-    width: auto; */
+  p {
+    font-size: 16px;
   }
 
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -29,7 +27,6 @@ const StyledCard = styled.div`
   &:hover {
     box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
-    /* border: none; */
   }
 `
 
@@ -38,10 +35,6 @@ const InfoWrapper = styled.div`
   flex-direction: column;
   padding: 8px 6px;
   gap: 3px;
-
-  p {
-    font-size: 17px;
-  }
 
   b {
     font-weight: 600;
@@ -54,15 +47,37 @@ const InfoWrapper = styled.div`
 `
 
 const CardFooter = styled.div`
+  padding: 8px;
+
   display: flex;
   flex-wrap: wrap;
   row-gap: 5px;
   gap: 5px;
 `
 
+const StyledQtyInput = styled.input`
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding: 0 5px;
+  width: 40px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+`
+
 export function Card({ id, path, title, price }) {
-  const { addToCart, isThereInCart } = useContext(CartContext)
   const { toggleToFavorite, isThereInFavorites } = useContext(FavoritesContext)
+
+  const [qty, setQty] = useState(1)
+  const onChangeQty = (e) => {
+    let value = e.target.valueAsNumber
+    if (value > 9) {
+      value = value % 10
+    }
+    if (value < 1) {
+      value = 1
+    }
+    setQty(value)
+  }
 
   return (
     <StyledCard>
@@ -70,13 +85,20 @@ export function Card({ id, path, title, price }) {
       <InfoWrapper>
         <p>{title}</p>
         <b>
-          Цена: <span>{price} руб.</span>
+          Цена: <span>{price * qty} руб.</span>
         </b>
       </InfoWrapper>
       <CardFooter>
+        <StyledQtyInput
+          type="number"
+          value={qty}
+          onChange={onChangeQty}
+          min={1}
+          max={9}
+        />
         <IconButton
-          disabled={isThereInCart(id)}
-          onClick={() => addToCart(id)}
+          // MARK!!! поменять 1 на userId когда сделаю контекст для юзера
+          onClick={() => addToCart(1, id, qty)}
           Icon={<AiOutlinePlus />}
         />
         <IconButton

@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Card } from '../components/Card'
-import { getItems } from '../data/getItems'
+import { getItems } from '../serverMethods/getItems'
 
 const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 70px 40px;
-  row-gap: 70px;
+  gap: 15px;
+  padding: 60px 30px;
+  row-gap: 60px;
   justify-content: space-evenly;
   align-items: flex-start;
 `
@@ -20,6 +20,16 @@ function Catalogpage() {
     getItems().then(setItems)
   }, [])
 
+  // testing
+  // const [test, setTest] = useState()
+  // useEffect(() => {
+  //   addToCart(1, )
+  // }, [])
+  // useEffect(() => {
+  //   console.log(test)
+  // }, [test])
+  // testing
+
   return (
     <CardsWrapper>
       {items.length !== 0 ? (
@@ -27,7 +37,7 @@ function Catalogpage() {
           <Card
             key={item.id}
             id={item.id}
-            path={item.image}
+            path={item.img}
             title={item.title}
             price={item.price}
           />

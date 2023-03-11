@@ -25,7 +25,7 @@ const ContentWrapper = styled.div`
   width: ${(props) => props.width || '400px'};
   background: ${(props) => props.background || 'white'};
   border-radius: ${(props) => props.radius || '20px'};
-  overflow: scroll;
+  overflow: auto;
   box-shadow: ${(props) => props.shadow || 'rgba(0, 0, 0, 0.4) 0px 5px 15px'};
 
   ${(props) => {
@@ -57,11 +57,7 @@ const ContentWrapper = styled.div`
   }}
 `
 
-export function Modal({ isOpen, close, children, uiOptions }) {
-  if (!isOpen) {
-    return null
-  }
-
+export function Modal({ close, children, uiOptions }) {
   uiOptions.stick = uiOptions.stick ?? 'center'
 
   return (

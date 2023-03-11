@@ -2,27 +2,27 @@ import { useState } from 'react'
 import { removeDuplicates } from '../utils/utils'
 
 export function useFavorites() {
-  const [items, setItems] = useState([])
+  const [ids, setIds] = useState([])
 
-  const addToFavorites = (item) =>
-    setItems((prev) => removeDuplicates([...prev, item]))
+  const addToFavorites = (id) =>
+    setIds((prev) => removeDuplicates([...prev, id]))
 
-  const removeFromFavorites = (item) =>
-    setItems((prev) => prev.filter((el) => el !== item))
+  const removeFromFavorites = (id) =>
+    setIds((prev) => prev.filter((el) => el !== id))
 
-  const isThereInFavorites = (item) => items.includes(item)
+  const isThereInFavorites = (id) => ids.includes(id)
 
-  const toggleToFavorite = (item) => {
-    if (isThereInFavorites(item)) {
-      removeFromFavorites(item)
+  const toggleToFavorite = (id) => {
+    if (isThereInFavorites(id)) {
+      removeFromFavorites(id)
     } else {
-      addToFavorites(item)
+      addToFavorites(id)
     }
   }
 
   return {
-    items,
-    setItems,
+    ids,
+    setIds,
     isThereInFavorites,
     addToFavorites,
     removeFromFavorites,

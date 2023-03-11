@@ -18,13 +18,13 @@ export function Layout() {
   const cart = useCart()
   const favorites = useFavorites()
 
-  useEffect(() => {
-    console.log(cart.purchases)
-  }, [cart.purchases])
+  // useEffect(() => {
+  //   console.log(cart.purchases)
+  // }, [cart.purchases])
 
-  useEffect(() => {
-    console.log(favorites.items)
-  }, [favorites.items])
+  // useEffect(() => {
+  //   console.log(favorites.items)
+  // }, [favorites.items])
 
   return (
     <>
@@ -33,7 +33,7 @@ export function Layout() {
           <CartContext.Provider value={{ ...cart }}>
             <FavoritesContext.Provider value={{ ...favorites }}>
               <Header />
-              <Cart />
+              {cart.isOpen && <Cart />}
               <Outlet />
             </FavoritesContext.Provider>
           </CartContext.Provider>
