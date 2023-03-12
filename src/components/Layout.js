@@ -1,13 +1,10 @@
+import { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
+import { CartContext } from '../hoc/CartProvider'
 import { Cart } from './Cart'
 import { Header } from './Header'
 import { Container } from './UI/Container'
-import { CartContext } from '../context/CartContext'
-import { useEffect } from 'react'
-import { useCart } from '../hooks/useCart'
-import { useFavorites } from '../hooks/useFavorites'
-import { FavoritesContext } from '../context/FavoritesContext'
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -15,28 +12,15 @@ const Wrapper = styled.div`
 `
 
 export function Layout() {
-  const cart = useCart()
-  const favorites = useFavorites()
-
-  // useEffect(() => {
-  //   console.log(cart.purchases)
-  // }, [cart.purchases])
-
-  // useEffect(() => {
-  //   console.log(favorites.items)
-  // }, [favorites.items])
+  const { isOpen } = useContext(CartContext)
 
   return (
     <>
       <Container>
         <Wrapper>
-          <CartContext.Provider value={{ ...cart }}>
-            <FavoritesContext.Provider value={{ ...favorites }}>
-              <Header />
-              {cart.isOpen && <Cart />}
-              <Outlet />
-            </FavoritesContext.Provider>
-          </CartContext.Provider>
+          <Header />
+          {isOpen && <Cart />}
+          <Outlet />
         </Wrapper>
       </Container>
     </>

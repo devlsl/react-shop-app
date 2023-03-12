@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { CartContext } from '../context/CartContext'
+import { useCart } from '../hooks/useCart'
 import { getCart } from '../serverMethods/getCart'
 import { Modal } from './UI/Modal'
 
@@ -14,7 +14,7 @@ const StyledCartContent = styled.div`
 `
 
 export function Cart() {
-  const { closeCart } = useContext(CartContext)
+  const { closeCart } = useCart()
   console.log('корзина отрисовалась')
 
   // {/* // MARK!!! поменять 1 на userId когда сделаю контекст для юзера */}

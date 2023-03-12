@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { IconButton } from './UI/IconButton'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
-import { useContext, useState } from 'react'
-import { FavoritesContext } from '../context/FavoritesContext'
+import { useState } from 'react'
 import { addToCart } from '../serverMethods/addToCart'
+import { useFavorites } from '../hooks/useFavorites'
+import { Input } from './UI/Input'
 
 const StyledCard = styled.div`
   border: 2px solid #f3f3f3;
@@ -55,17 +56,12 @@ const CardFooter = styled.div`
   gap: 5px;
 `
 
-const StyledQtyInput = styled.input`
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 8px;
-  padding: 0 5px;
+const StyledQtyInput = styled(Input)`
   width: 40px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
 `
 
 export function Card({ id, path, title, price }) {
-  const { toggleToFavorite, isThereInFavorites } = useContext(FavoritesContext)
+  const { toggleToFavorite, isThereInFavorites } = useFavorites()
 
   const [qty, setQty] = useState(1)
   const onChangeQty = (e) => {

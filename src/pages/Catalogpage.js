@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Card } from '../components/Card'
+import { useAuth } from '../hooks/useAuth'
 import { getItems } from '../serverMethods/getItems'
 
 const CardsWrapper = styled.div`

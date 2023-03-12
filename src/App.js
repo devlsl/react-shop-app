@@ -4,6 +4,11 @@ import { Layout } from './components/Layout'
 import { Trackingpage } from './pages/Trackingpage'
 import { Notfoundpage } from './pages/Notfoundpage'
 import { Orderspage } from './pages/Orderspage'
+import { Loginpage } from './pages/Loginpage'
+import { RequireAuth } from './hoc/RequireAuth'
+import { CartProvider } from './hoc/CartProvider'
+import { FavoritesProvider } from './hoc/FavoriteProvider'
+import { AuthProvider } from './hoc/AuthProvider'
 
 const router = createBrowserRouter([
   {
@@ -16,11 +21,23 @@ const router = createBrowserRouter([
       },
       {
         path: 'tracking',
-        element: <Trackingpage />
+        element: (
+          <RequireAuth>
+            <Trackingpage />
+          </RequireAuth>
+        )
       },
       {
         path: 'orders',
-        element: <Orderspage />
+        element: (
+          <RequireAuth>
+            <Orderspage />
+          </RequireAuth>
+        )
+      },
+      {
+        path: 'login',
+        element: <Loginpage />
       },
       {
         path: '*',
@@ -33,7 +50,13 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <CartProvider>
+          <FavoritesProvider>
+            <RouterProvider router={router} />
+          </FavoritesProvider>
+        </CartProvider>
+      </AuthProvider>
     </>
   )
 }

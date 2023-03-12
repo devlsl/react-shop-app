@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import { RowBox } from './UI/RowBox'
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { HiOutlineUserCircle } from 'react-icons/hi'
-import { useContext } from 'react'
-import { CartContext } from '../context/CartContext'
+import { useContext, useEffect, useState } from 'react'
+import { CartContext } from '../hoc/CartProvider'
+import { calcTotalCartAccount } from '../serverMethods/calcTotalCartAccount'
+import { useAuth } from '../hooks/useAuth'
+import { useCart } from '../hooks/useCart'
 
 const StyledHeader = styled.div`
   display: flex;
@@ -70,7 +73,16 @@ const HeadingsWrapper = styled.div`
 `
 
 export function Header() {
-  const { openCart } = useContext(CartContext)
+  const { openCart } = useCart()
+  const { user } = useAuth()
+
+  // MARK!!! поменять 1 на userId
+  const [totalAccount, setTotalAccount] = useState(0)
+  useEffect(() => {
+    if (user?.id) {
+      calcTotalCartAccount(user.id).then(setTotalAccount)
+    }
+  }, [user])
 
   return (
     <StyledHeader>
@@ -99,7 +111,7 @@ export function Header() {
           <button className="cartOpenBtn" onClick={openCart}>
             <RowBox gap="4px">
               <RiShoppingCart2Line opacity={0.7} size={21} />
-              <span>1205 Руб.</span>
+              <span>{totalAccount} руб.</span>
             </RowBox>
           </button>
           <NavLink to="orders">

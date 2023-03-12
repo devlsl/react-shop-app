@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { URL } from './API'
 import { getCart } from './getCart'
 
 export async function addToCart(userId, itemId, qty) {
@@ -9,5 +10,5 @@ export async function addToCart(userId, itemId, qty) {
   } else {
     cart[index].qty += qty
   }
-  axios.patch(`http://localhost:3050/users/${userId}`, { cart })
+  axios.patch(URL + `users/${userId}`, { cart })
 }

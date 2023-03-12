@@ -1,566 +1,602 @@
 {
   "users": [
     {
-      "id": 0,
+      "id": "0",
       "phone": "89204212421",
       "password": "0pass",
       "favorites": [
         {
-          "id": 1
+          "id": "1"
         },
         {
-          "id": 5
+          "id": "5"
         },
         {
-          "id": 8
+          "id": "8"
         }
       ],
       "cart": [
         {
-          "id": 2,
+          "id": "2",
           "qty": 1
         },
         {
-          "id": 23,
+          "id": "23",
           "qty": 2
         },
         {
-          "id": 3,
+          "id": "3",
           "qty": 1
         }
       ]
     },
     {
-      "id": 1,
+      "id": "1",
       "phone": "89301212970",
       "password": "1pass",
       "favorites": [
         {
-          "id": 12
+          "id": "12"
         },
         {
-          "id": 14
+          "id": "14"
         },
         {
-          "id": 18
+          "id": "18"
         },
         {
-          "id": 23
+          "id": "23"
         },
         {
-          "id": 46
+          "id": "46"
         },
         {
-          "id": 20
+          "id": "20"
         },
         {
-          "id": 31
+          "id": "31"
         }
       ],
       "cart": [
         {
-          "id": 13,
+          "id": "13",
           "qty": 1
         },
         {
-          "id": 15,
+          "id": "15",
           "qty": 2
         },
         {
-          "id": 1,
-          "qty": 2
-        },
-        {
-          "id": 2,
-          "qty": 2
+          "id": "1",
+          "qty": 3
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "phone": "89100391931",
       "password": "2pass",
       "favorites": [],
       "cart": []
     },
     {
-      "id": 3,
+      "id": "3",
       "phone": "89912039123",
       "password": "3pass",
       "favorites": [
         {
-          "id": 1
+          "id": "1"
         },
         {
-          "id": 2
+          "id": "2"
         },
         {
-          "id": 40
+          "id": "40"
         },
         {
-          "id": 39
+          "id": "39"
         },
         {
-          "id": 23
+          "id": "23"
         },
         {
-          "id": 24
+          "id": "24"
         },
         {
-          "id": 26
+          "id": "26"
         }
       ],
       "cart": [
         {
-          "id": 17,
+          "id": "17",
           "qty": 1
         }
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "phone": "89129049212",
       "password": "4pass",
       "favorites": [
         {
-          "id": 0
+          "id": "0"
         },
         {
-          "id": 2
+          "id": "2"
         },
         {
-          "id": 4
+          "id": "4"
         },
         {
-          "id": 5
+          "id": "5"
         },
         {
-          "id": 6
+          "id": "6"
         },
         {
-          "id": 7
+          "id": "7"
         },
         {
-          "id": 19
+          "id": "19"
         }
       ],
       "cart": [
         {
-          "id": 10,
+          "id": "10",
           "qty": 1
         },
         {
-          "id": 26,
+          "id": "26",
           "qty": 2
         }
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "phone": "89124219424",
       "password": "5pass",
       "favorites": [
         {
-          "id": 40
+          "id": "40"
         },
         {
-          "id": 39
+          "id": "39"
         },
         {
-          "id": 34
+          "id": "34"
         },
         {
-          "id": 20
+          "id": "20"
         },
         {
-          "id": 21
+          "id": "21"
         },
         {
-          "id": 17
+          "id": "17"
         },
         {
-          "id": 10
+          "id": "10"
         },
         {
-          "id": 6
+          "id": "6"
         },
         {
-          "id": 3
+          "id": "3"
         }
       ],
       "cart": [
         {
-          "id": 30,
+          "id": "30",
           "qty": 1
         }
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "phone": "89654429459",
       "password": "6pass",
       "favorites": [
         {
-          "id": 0
+          "id": "0"
         },
         {
-          "id": 12
+          "id": "12"
         },
         {
-          "id": 17
+          "id": "17"
         },
         {
-          "id": 30
+          "id": "30"
         },
         {
-          "id": 40
+          "id": "40"
         }
       ],
       "cart": [
         {
-          "id": 42,
+          "id": "42",
           "qty": 1
         }
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "phone": "89909341993",
       "password": "7pass",
       "favorites": [
         {
-          "id": 3
+          "id": "3"
         },
         {
-          "id": 4
+          "id": "4"
         },
         {
-          "id": 29
+          "id": "29"
         },
         {
-          "id": 39
+          "id": "39"
         },
         {
-          "id": 31
+          "id": "31"
         }
       ],
       "cart": [
         {
-          "id": 2,
+          "id": "2",
           "qty": 1
         },
         {
-          "id": 23,
+          "id": "23",
           "qty": 2
         },
         {
-          "id": 3,
+          "id": "3",
           "qty": 1
         },
         {
-          "id": 7,
+          "id": "7",
           "qty": 3
         }
       ]
+    },
+    {
+      "phone": "000",
+      "password": "",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "GOkBOGy"
+    },
+    {
+      "phone": "755",
+      "password": "vladis",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "ifBRbM_"
+    },
+    {
+      "phone": "7553",
+      "password": "vladis",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "PjR2UP8"
+    },
+    {
+      "phone": "75532323",
+      "password": "adasd",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "s3OgauO"
+    },
+    {
+      "phone": "777",
+      "password": "vlad",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "Hc1NaXt"
     }
   ],
   "items": [
     {
-      "id": 0,
+      "id": "0",
       "title": "(hello from js) Apple iPad Pro 12.9\" (2022) 128GB Wi-Fi Space Gray",
       "category": "ipad",
       "price": 98990,
       "img": "https://images.biggeek.ru/1/435/927a/19316-947129_SG_WIFI.png"
     },
     {
-      "id": 1,
+      "id": "1",
       "title": "Apple iPad Pro 11\" (2022) 128GB Wi-Fi Space Gray",
       "category": "ipad",
       "price": 77990,
       "img": "https://images.biggeek.ru/1/435/d405/19296-83511_SG_WIFI.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Apple iPad 10.9\" (2022) 64GB Wi-Fi Yellow",
       "category": "ipad",
       "price": 45990,
       "img": "https://images.biggeek.ru/1/435/1360/19282-568ipad-2022-hero-yellow-wifi-select.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Apple Watch Series 8 GPS + Cellular, 41mm, корпус из стали серебристого цвета, серебристый миланский сетчатый браслет (Milanese Loop)",
       "category": "watch",
       "price": 77990,
       "img": "https://images.biggeek.ru/1/435/e6ff/18645-1518645.jpeg"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Apple Watch Series 8 GPS + Cellular, 41mm, корпус из стали серебристого цвета, серебристый миланский сетчатый браслет (Milanese Loop)",
       "category": "watch",
       "price": 36990,
       "img": "https://images.biggeek.ru/1/435/d1cd/18631-43818631.jpeg"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Apple iPhone 14 Pro Max 128GB (Тёмно-фиолетовый | Deep Purple)",
       "category": "iphone",
       "price": 109990,
       "img": "https://images.biggeek.ru/1/435/3e93/18503-63Deeppurple.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Apple MacBook Pro 13 Retina Touch Bar MNEQ3 Silver (M2 8-Core GPU 10-Core, 8 Gb 512 Gb)",
       "category": "macbook",
       "price": 141990,
       "img": "https://images.biggeek.ru/1/435/406e/17328-87613015-17412706-14211804-378Silver_13_touch.jpeg"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Apple iPhone 14 Pro 128GB (Тёмно-фиолетовый | Deep Purple)",
       "category": "iphone",
       "price": 94990,
       "img": "https://images.biggeek.ru/1/435/57e9/18487-421Deeppurple.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Apple iPhone 14 Plus 128GB (Синий | Blue)",
       "category": "iphone",
       "price": 73990,
       "img": "https://images.biggeek.ru/1/435/1a0d/18471-601Blue.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Клавиатура Apple Smart Keyboard Folio для iPad Air и iPad Pro 11 дюймов",
       "category": "keyboard",
       "price": 19990,
       "img": "https://images.biggeek.ru/1/435/8115/17928-37311folio_uk.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Apple MacBook Pro 13 Retina Touch Bar MNEH3 Space Gray (M2 8-Core GPU 10-Core, 8 Gb, 256 Gb)",
       "category": "macbook",
       "price": 112990,
       "img": "https://images.biggeek.ru/1/435/9389/17323-97212703-23312384-362Spacegray_13_touch.jpeg"
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Умная колонка Apple HomePod mini",
       "category": "smart-speaker",
       "price": 11990,
       "img": "https://images.biggeek.ru/1/435/fdea/15489-426Hpod_bk.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Apple Watch Series 7 GPS, 45mm, корпус из алюминия цвета «тёмная ночь», спортивный ремешок (Sport Band) цвета «Тёмная ночь»",
       "category": "watch",
       "price": 32990,
       "img": "https://images.biggeek.ru/1/435/a8aa/15090-1915090.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Apple iPhone 13 Pro Max 128GB (Серебристый | Silver)",
       "category": "iphone",
       "price": 94990,
       "img": "https://images.biggeek.ru/1/435/83ac/14724-97Silver.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Apple iPhone 13 Pro 128GB (Серебристый | Silver)",
       "category": "iphone",
       "price": 90990,
       "img": "https://images.biggeek.ru/1/435/878e/14708-820Silver.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Apple iPhone 13 Pro Max 128GB (Небесно-голубой | Sierra Blue)",
       "category": "iphone",
       "price": 94990,
       "img": "https://images.biggeek.ru/1/435/9859/14723-653Blue.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Apple iPhone 13 mini 128GB (Розовый | Pink)",
       "category": "iphone",
       "price": 59990,
       "img": "https://images.biggeek.ru/1/435/01ff/14677-597Pink.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Аудиокабель Apple Lightning — 3,5 мм (1,2 м)",
       "category": "cable",
       "price": 3990,
       "img": "https://images.biggeek.ru/1/435/6fba/14599-818MR2C2.jpeg"
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Apple iPad Pro 11\" (2021) 128Gb Wi-Fi Space Gray",
       "category": "ipad",
       "price": 74990,
       "img": "https://images.biggeek.ru/1/435/0261/13856-75711140-40711-wifi-spacegray.png"
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Apple MacBook Air 13 Retina MGN73 Space Gray (M1 8-Core, GPU 8-Core, 8GB, 512Gb)",
       "category": "macbook",
       "price": 105990,
       "img": "https://images.biggeek.ru/1/435/23e7/12700-76111174-918air_grey.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Кабель Apple USB-C — Lightning (1 м) (OEM)",
       "category": "cable",
       "price": 1290,
       "img": "https://images.biggeek.ru/1/435/21f8/13347-759orig-1.jpg"
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Кабель Apple Thunderbolt 3 Pro (2 м)",
       "category": "cable",
       "price": 14990,
       "img": "https://images.biggeek.ru/1/435/9ec9/12295-151bb12b0ee644240c7a8f1f8f3772c33a0.jpg"
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Apple iPhone SE (2020) 64GB (Чёрный | Black)",
       "category": "iphone",
       "price": 29990,
       "img": "https://images.biggeek.ru/1/435/712e/11340-755black.jpeg"
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Клавиатура Apple Magic Keyboard для iPad Air и iPad Pro 11\" (RS/A)",
       "category": "keyboard",
       "price": 36990,
       "img": "https://images.biggeek.ru/1/435/8fa7/11173-246MJQJ3RS_AV1_rus.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Apple iPhone 11 64GB (Чёрный | Black)",
       "category": "iphone",
       "price": 38990,
       "img": "https://images.biggeek.ru/1/435/a296/9913-898bigeek_image4.jpeg"
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Apple MacBook Pro 16 MNWA3 Space Gray (M2 Max 12-Core, GPU 38-Core, 32GB, 1TB)",
       "category": "macbook",
       "price": 359990,
       "img": "https://images.biggeek.ru/1/435/0176/19900-21716_Space%20Gray.jpeg"
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "Apple MacBook Pro 16 MNW83 Space Gray (M2 Pro 12-Core, GPU 19-Core, 16GB, 512GB)",
       "category": "macbook",
       "price": 226990,
       "img": "https://images.biggeek.ru/1/435/ea85/19896-80416_Space%20Gray.jpeg"
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "Apple iPad Pro 11\" (2022) 128GB Wi-Fi Silver",
       "category": "ipad",
       "price": 76990,
       "img": "https://images.biggeek.ru/1/435/97c1/19297-61411_SLV_WIFI.png"
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "Apple iPad 10.9\" (2022) 64GB Wi-Fi Pink",
       "category": "ipad",
       "price": 45990,
       "img": "https://images.biggeek.ru/1/435/fc89/19280-575ipad-2022-hero-pink-wifi-select.png"
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Apple iPhone 14 Pro Max 128GB (Золотой | Gold)",
       "category": "iphone",
       "price": 99990,
       "img": "https://images.biggeek.ru/1/435/3950/18504-15Gold.jpg"
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Apple iPhone 14 Pro 128GB (Золотой | Gold)",
       "category": "iphone",
       "price": 86990,
       "img": "https://images.biggeek.ru/1/435/283a/18488-306Gold.jpg"
     },
     {
-      "id": 31,
+      "id": "31",
       "title": "Apple MacBook Pro 13 Retina Touch Bar MNEJ3 Space Gray (M2 8-Core GPU 10-Core, 8 Gb 512 Gb)",
       "category": "macbook",
       "price": 141990,
       "img": "https://images.biggeek.ru/1/435/6b32/17325-83412703-23312384-362Spacegray_13_touch.jpeg"
     },
     {
-      "id": 32,
+      "id": "32",
       "title": "Apple MacBook Air 13 Retina MLY33 Midnight (M2 8-Core, GPU 8-Core, 8 GB, 256 Gb)",
       "category": "macbook",
       "price": 105990,
       "img": "https://images.biggeek.ru/1/435/b49e/17239-952macbook-air-midnight-gallery1-20220606.jpeg.jpg"
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "Apple iPhone 12 Pro 128GB Graphite Официально восстановленный",
       "category": "iphone",
       "price": 85990,
       "img": "https://images.biggeek.ru/1/435/c5e0/16434-81659984.jpeg"
     },
     {
-      "id": 34,
+      "id": "34",
       "title": "Apple MacBook Pro 13 Retina Touch Bar FYD82 Space Gray (M1 8-Core, 8GB, 256Gb) Официально восстановленный",
       "category": "macbook",
       "price": 104990,
       "img": "https://images.biggeek.ru/1/435/ba71/16176-44962294.jpg"
     },
     {
-      "id": 35,
+      "id": "35",
       "title": "Apple MacBook Air 13 Retina FGN73 Space Gray (M1 8-Core, 8GB, 512Gb) Официально восстановленный",
       "category": "macbook",
       "price": 103990,
       "img": "https://images.biggeek.ru/1/435/94e6/16173-82562313.jpg"
     },
     {
-      "id": 36,
+      "id": "36",
       "title": "Apple iPhone 11 Pro 64GB Silver Официально восстановленный",
       "category": "iphone",
       "price": 49990,
       "img": "https://images.biggeek.ru/1/435/0991/15553-7779932-62bigeek_image2.jpeg"
     },
     {
-      "id": 37,
+      "id": "37",
       "title": "Apple MacBook Pro 16 MK1A3 Space Gray (M1 Max 10-Core, GPU 32-Core, 32GB, 1TB)",
       "category": "macbook",
       "price": 279990,
       "img": "https://images.biggeek.ru/1/435/a990/15347-37916_space_BG.jpeg"
     },
     {
-      "id": 38,
+      "id": "38",
       "title": "Apple iMac 4K 21.5\" MHK23 (2020) Core i3 3.6 Ghz, 8Gb, 256 SSD, AMD Radeon Pro 555X",
       "category": "imac",
       "price": 119990,
       "img": "https://images.biggeek.ru/1/435/6bf3/12685-97521.435x435.jpg"
     },
     {
-      "id": 39,
+      "id": "39",
       "title": "Apple iPhone 14 Pro 128GB (Серебристый | Silver)",
       "category": "iphone",
       "price": 94990,
       "img": "https://images.biggeek.ru/1/435/8166/18489-999Silver.jpg"
     },
     {
-      "id": 40,
+      "id": "40",
       "title": "Apple iPhone 14 Pro Max 128GB (Серебристый | Silver)",
       "category": "iphone",
       "price": 107990,
       "img": "https://images.biggeek.ru/1/435/bedb/18505-674Silver.jpg"
     },
     {
-      "id": 41,
+      "id": "41",
       "title": "Apple iPhone 14 Plus 128GB («Тёмная ночь» | Midnight)",
       "category": "iphone",
       "price": 73990,
       "img": "https://images.biggeek.ru/1/435/853a/18473-376Midnight.jpg"
     },
     {
-      "id": 42,
+      "id": "42",
       "title": "Apple iPhone 14 128GB («Тёмная ночь» | Midnight)",
       "category": "iphone",
       "price": 67990,

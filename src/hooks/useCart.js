@@ -1,14 +1,6 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../hoc/CartProvider'
 
 export function useCart() {
-  const [isOpen, setOpen] = useState(false)
-  const openCart = () => setOpen(true)
-  const closeCart = () => setOpen(false)
-
-  return {
-    isOpen,
-    setOpen,
-    openCart,
-    closeCart
-  }
+  return useContext(CartContext)
 }
