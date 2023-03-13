@@ -2,10 +2,12 @@ import styled from 'styled-components'
 import { IconButton } from './UI/IconButton'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { addToCart } from '../serverMethods/addToCart'
 import { useFavorites } from '../hooks/useFavorites'
 import { Input } from './UI/Input'
+import { useAuth } from '../hooks/useAuth'
+import { useCart } from '../hooks/useCart'
 
 const StyledCard = styled.div`
   border: 2px solid #f3f3f3;
@@ -61,6 +63,9 @@ const StyledQtyInput = styled(Input)`
 `
 
 export function Card({ id, path, title, price }) {
+  const { user } = useAuth()
+  const { cartHasChanged } = useCart()
+
   const { toggleToFavorite, isThereInFavorites } = useFavorites()
 
   const [qty, setQty] = useState(1)
@@ -84,28 +89,34 @@ export function Card({ id, path, title, price }) {
           Цена: <span>{price * qty} руб.</span>
         </b>
       </InfoWrapper>
-      <CardFooter>
-        <StyledQtyInput
-          type="number"
-          value={qty}
-          onChange={onChangeQty}
-          min={1}
-          max={9}
-        />
-        <IconButton
-          // MARK!!! поменять 1 на userId когда сделаю контекст для юзера
-          onClick={() => addToCart(1, id, qty)}
-          Icon={<AiOutlinePlus />}
-        />
-        <IconButton
-          onClick={() => toggleToFavorite(id)}
-          Icon={
-            <MdOutlineFavoriteBorder
-              color={isThereInFavorites(id) ? 'red' : ''}
-            />
-          }
-        />
-      </CardFooter>
+      {user && (
+        <CardFooter>
+          <StyledQtyInput
+            type="number"
+            value={qty}
+            onChange={onChangeQty}
+            min={1}
+            max={9}
+          />
+          <IconButton
+            // MARK!!! поменять 1 на userId когда сделаю контекст для юзера
+            onClick={async () => {
+              console.log('user: ', user)
+              await addToCart(user, id, qty)
+              cartHasChanged()
+            }}
+            Icon={<AiOutlinePlus />}
+          />
+          <IconButton
+            onClick={() => toggleToFavorite(id)}
+            Icon={
+              <MdOutlineFavoriteBorder
+                color={isThereInFavorites(id) ? 'red' : ''}
+              />
+            }
+          />
+        </CardFooter>
+      )}
     </StyledCard>
   )
 }

@@ -73,16 +73,15 @@ const HeadingsWrapper = styled.div`
 `
 
 export function Header() {
-  const { openCart } = useCart()
+  const { openCart, cartChangeTrigger } = useCart()
   const { user } = useAuth()
 
-  // MARK!!! поменять 1 на userId
   const [totalAccount, setTotalAccount] = useState(0)
   useEffect(() => {
-    if (user?.id) {
-      calcTotalCartAccount(user.id).then(setTotalAccount)
+    if (user) {
+      calcTotalCartAccount(user).then(setTotalAccount)
     }
-  }, [user])
+  }, [user, cartChangeTrigger])
 
   return (
     <StyledHeader>
@@ -95,7 +94,34 @@ export function Header() {
         </HeadingsWrapper>
       </InfoWrapper>
 
-      <RowBox gap="60px">
+      {user ? (
+        <RowBox gap="60px">
+          <RowBox
+            gap="30px"
+            style={{
+              fontWeight: '400',
+              fontSize: '18px'
+            }}
+          >
+            <NavLink to="/">Каталог</NavLink>
+            <NavLink to="tracking">Отследить заказ</NavLink>
+          </RowBox>
+
+          <RowBox gap="20px">
+            <button className="cartOpenBtn" onClick={openCart}>
+              <RowBox gap="4px">
+                <RiShoppingCart2Line opacity={0.7} size={21} />
+                <span>{totalAccount || 0} руб.</span>
+              </RowBox>
+            </button>
+            <NavLink to="orders">
+              <RowBox>
+                <HiOutlineUserCircle opacity={0.7} size={21} />
+              </RowBox>
+            </NavLink>
+          </RowBox>
+        </RowBox>
+      ) : (
         <RowBox
           gap="30px"
           style={{
@@ -104,23 +130,9 @@ export function Header() {
           }}
         >
           <NavLink to="/">Каталог</NavLink>
-          <NavLink to="tracking">Отследить заказ</NavLink>
+          <NavLink to="login">Авторизация</NavLink>
         </RowBox>
-
-        <RowBox gap="20px">
-          <button className="cartOpenBtn" onClick={openCart}>
-            <RowBox gap="4px">
-              <RiShoppingCart2Line opacity={0.7} size={21} />
-              <span>{totalAccount} руб.</span>
-            </RowBox>
-          </button>
-          <NavLink to="orders">
-            <RowBox>
-              <HiOutlineUserCircle opacity={0.7} size={21} />
-            </RowBox>
-          </NavLink>
-        </RowBox>
-      </RowBox>
+      )}
     </StyledHeader>
   )
 }
