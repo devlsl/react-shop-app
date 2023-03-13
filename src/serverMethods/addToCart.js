@@ -10,5 +10,5 @@ export async function addToCart(userId, itemId, qty) {
   } else {
     cart[index].qty += qty
   }
-  axios.patch(URL + `users/${userId}`, { cart })
+  await axios.patch(URL + `users/${userId}`, { cart })
 }

@@ -9,6 +9,7 @@ import { RequireAuth } from './hoc/RequireAuth'
 import { CartProvider } from './hoc/CartProvider'
 import { FavoritesProvider } from './hoc/FavoriteProvider'
 import { AuthProvider } from './hoc/AuthProvider'
+import { Test } from './serverMethods/Test'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Loginpage />
+      },
+      {
+        path: 'test',
+        element: <Test />
       },
       {
         path: '*',

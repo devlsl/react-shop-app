@@ -294,6 +294,19 @@
       "favorites": [],
       "orders": [],
       "id": "Ejcd999"
+    },
+    {
+      "phone": "0",
+      "password": "0",
+      "cart": [
+        {
+          "id": "1",
+          "qty": 3
+        }
+      ],
+      "favorites": [],
+      "orders": [],
+      "id": "9lDFAji"
     }
   ],
   "items": [
