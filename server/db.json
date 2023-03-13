@@ -301,18 +301,67 @@
       "cart": [
         {
           "id": "1",
-          "qty": 3
+          "qty": 21
+        },
+        {
+          "id": "2",
+          "qty": 2
+        },
+        {
+          "id": "4",
+          "qty": 2
         }
       ],
-      "favorites": [],
+      "favorites": [
+        {
+          "id": "12"
+        },
+        {
+          "id": "13"
+        },
+        {
+          "id": "14"
+        },
+        {
+          "id": "19"
+        },
+        {
+          "id": "20"
+        },
+        {
+          "id": "18"
+        },
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
       "orders": [],
       "id": "9lDFAji"
+    },
+    {
+      "phone": "asdf",
+      "password": "adsfasfd",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "nv7jrL2"
+    },
+    {
+      "phone": "dwadaw0",
+      "password": "0wadaw",
+      "cart": [],
+      "favorites": [],
+      "orders": [],
+      "id": "B_mQU2J"
     }
   ],
   "items": [
     {
       "id": "0",
-      "title": "(hello from js) Apple iPad Pro 12.9\" (2022) 128GB Wi-Fi Space Gray",
+      "title": "Apple iPad Pro 12.9\" (2022) 128GB Wi-Fi Space Gray",
       "category": "ipad",
       "price": 98990,
       "img": "https://images.biggeek.ru/1/435/927a/19316-947129_SG_WIFI.png"

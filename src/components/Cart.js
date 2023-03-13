@@ -1,37 +1,38 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { useAuth } from '../hooks/useAuth'
 import { useCart } from '../hooks/useCart'
 import { getCart } from '../serverMethods/getCart'
+import { CartItem } from './CartItem'
 import { Modal } from './UI/Modal'
 
 const StyledCartContent = styled.div`
-  color: red;
-
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
 `
 
 export function Cart() {
   const { closeCart } = useCart()
-  console.log('корзина отрисовалась')
+  const { user } = useAuth()
 
-  // {/* // MARK!!! поменять 1 на userId когда сделаю контекст для юзера */}
-  const [temp, setTemp] = useState([])
+  const [items, setItems] = useState([])
   useEffect(() => {
-    getCart(1).then(setTemp)
+    if (user) {
+      getCart(user).then(setItems)
+    }
   }, [])
 
   return (
-    <Modal close={closeCart} uiOptions={{ stick: 'right' }}>
+    <Modal close={closeCart} uiOptions={{ stick: 'right', width: '500px' }}>
       <StyledCartContent>
-        {temp &&
-          temp.map((item) => (
-            <h1 key={item.id} style={{ marginRight: '10px' }}>
-              {item.id}:{item.qty}
-            </h1>
+        {items &&
+          items.map((item) => (
+            <CartItem key={item.id} id={item.id} qty={item.qty} />
           ))}
+        <button onClick={closeCart}>закрыть корзину</button>
       </StyledCartContent>
     </Modal>
   )

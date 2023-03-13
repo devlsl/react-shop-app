@@ -14,6 +14,9 @@ const StyledLoginPage = styled.div`
   justify-content: center;
   align-items: center;
   height: 80vh;
+  *:focus {
+    outline: 1px solid blue !important;
+  }
 `
 
 const StatusBlock = styled.div`
@@ -121,6 +124,7 @@ export function Loginpage() {
           <ColBox gap="20px">
             <ColBox gap="20px">
               <LoginInput
+                disabled={user ? true : false}
                 type="tel"
                 name="phone"
                 placeholder="телефон"
@@ -128,6 +132,7 @@ export function Loginpage() {
                 onChange={phoneChangeHandler}
               />
               <LoginInput
+                disabled={user ? true : false}
                 type="password"
                 name="password"
                 placeholder="пароль"
@@ -142,10 +147,19 @@ export function Loginpage() {
             )}
           </ColBox>
           <ColBox gap="12px">
-            <RegisterButton value="signUp" type="submit">
+            <RegisterButton
+              disabled={user ? true : false}
+              value="signUp"
+              type="submit"
+              tabIndex="1"
+            >
               Зарегистрироваться
             </RegisterButton>
-            <LoginButton value="signIn" type="submit">
+            <LoginButton
+              disabled={user ? true : false}
+              value="signIn"
+              type="submit"
+            >
               Войти
             </LoginButton>
           </ColBox>

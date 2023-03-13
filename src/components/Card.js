@@ -8,6 +8,8 @@ import { useFavorites } from '../hooks/useFavorites'
 import { Input } from './UI/Input'
 import { useAuth } from '../hooks/useAuth'
 import { useCart } from '../hooks/useCart'
+import { toggleToFavorites } from '../serverMethods/toggleToFavorites'
+import { isThereItemInFavorites } from '../serverMethods/isThereItemInFavorites'
 
 const StyledCard = styled.div`
   border: 2px solid #f3f3f3;
@@ -62,13 +64,13 @@ const StyledQtyInput = styled(Input)`
   width: 40px;
 `
 
-export function Card({ id, path, title, price }) {
+export function Card({ id, path, title, price, count = 1 }) {
   const { user } = useAuth()
+
   const { cartHasChanged } = useCart()
+  const { favoritesHasChanged } = useFavorites()
 
-  const { toggleToFavorite, isThereInFavorites } = useFavorites()
-
-  const [qty, setQty] = useState(1)
+  const [qty, setQty] = useState(count)
   const onChangeQty = (e) => {
     let value = e.target.valueAsNumber
     if (value > 9) {
@@ -80,9 +82,18 @@ export function Card({ id, path, title, price }) {
     setQty(value)
   }
 
+  const [isFavorite, setFavorite] = useState(false)
+  useEffect(() => {
+    if (user) {
+      isThereItemInFavorites(user, id).then(setFavorite)
+    } else {
+      setFavorite(false)
+    }
+  }, [])
+
   return (
     <StyledCard>
-      <img src={path} alt="sneakers" />
+      <img src={path} alt="item" />
       <InfoWrapper>
         <p>{title}</p>
         <b>
@@ -99,21 +110,19 @@ export function Card({ id, path, title, price }) {
             max={9}
           />
           <IconButton
-            // MARK!!! поменять 1 на userId когда сделаю контекст для юзера
             onClick={async () => {
-              console.log('user: ', user)
               await addToCart(user, id, qty)
               cartHasChanged()
             }}
             Icon={<AiOutlinePlus />}
           />
           <IconButton
-            onClick={() => toggleToFavorite(id)}
-            Icon={
-              <MdOutlineFavoriteBorder
-                color={isThereInFavorites(id) ? 'red' : ''}
-              />
-            }
+            onClick={async () => {
+              await toggleToFavorites(user, id)
+              setFavorite((prev) => !prev)
+              favoritesHasChanged()
+            }}
+            Icon={<MdOutlineFavoriteBorder color={isFavorite ? 'red' : ''} />}
           />
         </CardFooter>
       )}

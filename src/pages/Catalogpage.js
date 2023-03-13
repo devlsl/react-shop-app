@@ -21,16 +21,6 @@ function Catalogpage() {
     getItems().then(setItems)
   }, [])
 
-  // testing
-  // const [test, setTest] = useState()
-  // useEffect(() => {
-  //   addToCart(1, )
-  // }, [])
-  // useEffect(() => {
-  //   console.log(test)
-  // }, [test])
-  // testing
-
   return (
     <CardsWrapper>
       {items.length !== 0 ? (
