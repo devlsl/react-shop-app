@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
 import { CartContext } from '../hoc/CartProvider'
 import { Cart } from './Cart'
-import { Header } from './Header'
+import { Header } from './Header/Header'
 import { Container } from './UI/Container'
 
 const Wrapper = styled.div`

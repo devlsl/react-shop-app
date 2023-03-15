@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getItem } from '../serverMethods/getItem'
-import { Card } from './Card'
+import { CatalogItem } from './CatalogItem/CatalogItem'
 
 export function CartItem({ id, qty }) {
   const [item, setItem] = useState()
@@ -14,7 +14,7 @@ export function CartItem({ id, qty }) {
   return (
     <>
       {item && (
-        <Card
+        <CatalogItem
           id={item.id}
           path={item.img}
           title={item.title}

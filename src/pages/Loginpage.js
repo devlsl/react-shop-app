@@ -113,7 +113,7 @@ export function Loginpage() {
     if (user) {
       setTimeout(() => {
         navigate(fromPage, { replace: true })
-      }, 2000)
+      }, 1000)
     }
   }, [user])
 

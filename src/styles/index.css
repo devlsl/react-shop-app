@@ -11,6 +11,15 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+.border {
+  border: 1px solid red;
+}
+
+.borderAll * {
+  border: 1px solid red;
+  padding: 2px;
+}
+
 /* Временные стили */
 /* div {
   border: 1px solid red;

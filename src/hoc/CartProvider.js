@@ -5,7 +5,7 @@ export const CartContext = createContext(null)
 
 export function CartProvider({ children }) {
   const [isOpen, setOpen] = useState(false)
-  const [cartChangeTrigger, setCartChangeTrigger] = useState()
+  const [cartChangeTrigger, setCartChangeTrigger] = useState(false)
   const cartHasChanged = () => setCartChangeTrigger((prev) => !prev)
   const openCart = () => setOpen(true)
   const closeCart = () => setOpen(false)

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
+import { cssJustify } from '../../utils/utils'
 
 export const RowBox = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: ${(props) => props.gap || '0px'};
-  align-items: center;
-
-  img {
-    width: 20px;
-    height: 20px;
-  }
+  flex-direction: row;
+  justify-content: ${(props) => cssJustify(props.justify)};
+  align-items: ${(props) => props.align || 'center'};
+  gap: ${(props) => props.gap || ''};
+  height: ${(props) => props.height || ''};
+  width: ${(props) => props.width || ''};
+  padding: ${(props) => props.padding || ''};
+  margin: ${(props) => props.margin || ''};
 `

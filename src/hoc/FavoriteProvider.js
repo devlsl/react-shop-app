@@ -5,7 +5,7 @@ import { createContext } from 'react'
 export const FavoritesContext = createContext(null)
 
 export function FavoritesProvider({ children }) {
-  const [favoritesChangeTrigger, setFavoritesChangeTrigger] = useState()
+  const [favoritesChangeTrigger, setFavoritesChangeTrigger] = useState(false)
   const favoritesHasChanged = () => setFavoritesChangeTrigger((prev) => !prev)
 
   const value = {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Card } from '../components/Card'
-import { useAuth } from '../hooks/useAuth'
+import { CatalogItem } from '../components/CatalogItem/CatalogItem'
+import { CatalogItemSkeleton } from '../components/CatalogItem/CatalogItemSkeleton'
 import { getItems } from '../serverMethods/getItems'
 
 const CardsWrapper = styled.div`
@@ -25,7 +25,7 @@ function Catalogpage() {
     <CardsWrapper>
       {items.length !== 0 ? (
         items.map((item) => (
-          <Card
+          <CatalogItem
             key={item.id}
             id={item.id}
             path={item.img}
@@ -34,7 +34,11 @@ function Catalogpage() {
           />
         ))
       ) : (
-        <h1>загрузка</h1>
+        <>
+          {[...Array(10).keys()].map((i) => (
+            <CatalogItemSkeleton key={i} />
+          ))}
+        </>
       )}
     </CardsWrapper>
   )

@@ -1,5 +1,3 @@
-import axios from 'axios'
-import { URL } from './API'
 import { getFavorites } from './getFavorites'
 
 export async function isThereItemInFavorites(userId, itemId) {

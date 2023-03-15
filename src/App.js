@@ -10,6 +10,7 @@ import { CartProvider } from './hoc/CartProvider'
 import { FavoritesProvider } from './hoc/FavoriteProvider'
 import { AuthProvider } from './hoc/AuthProvider'
 import { Test } from './serverMethods/Test'
+import { Favoreitespage } from './pages/Favoreitespage'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Loginpage />
+      },
+      {
+        path: 'favorites',
+        element: <Favoreitespage />
       },
       {
         path: 'test',

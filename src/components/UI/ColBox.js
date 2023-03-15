@@ -1,9 +1,6 @@
 import styled from 'styled-components'
+import { RowBox } from './RowBox'
 
-export const ColBox = styled.div`
-  display: flex;
+export const ColBox = styled(RowBox)`
   flex-direction: column;
-  justify-content: space-between;
-  gap: ${(props) => props.gap || '0px'};
-  align-items: center;
 `

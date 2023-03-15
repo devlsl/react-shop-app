@@ -6,6 +6,8 @@ import { isThereItemInFavorites } from './isThereItemInFavorites'
 import { toggleToFavorites } from './toggleToFavorites'
 
 export function Test() {
+  useEffect(() => {}, [])
+
   const testing = async () => {
     // isThereItemInFavorites
     // console.log('expected true', await isThereItemInFavorites('3', '2'))
@@ -20,9 +22,9 @@ export function Test() {
     // await deleteFromFavorites('3', '4')
     // console.log(await getFavorites('3'))
     // toggleToFavorites
-    console.log(await getFavorites('3'))
-    await toggleToFavorites('3', '4')
-    console.log(await getFavorites('3'))
+    // console.log(await getFavorites('3'))
+    // await toggleToFavorites('3', '4')
+    // console.log(await getFavorites('3'))
     // await toggleToFavorites('3', '4')
     // console.log(await getFavorites('3'))
   }
