@@ -1,19 +1,19 @@
 import { useCart } from '../../hooks/useCart'
-import { addToCart } from '../../serverMethods/addToCart'
 import { BorderButton } from './BorderButton'
-import { AiOutlinePlus } from 'react-icons/ai'
+import { RiDeleteBinLine } from 'react-icons/ri'
+import { deleteFromCart } from '../../serverMethods/deleteFromCart'
 
-export function AddToCartButton({ userId, itemId, itemQty }) {
+export function DeleteFromCartButton({ userId, itemId, itemQty }) {
   const { cartHasChanged } = useCart()
 
   const onClick = async () => {
-    await addToCart(userId, itemId, itemQty)
+    await deleteFromCart(userId, itemId)
     cartHasChanged()
   }
 
   return (
     <BorderButton onClick={onClick}>
-      <AiOutlinePlus />
+      <RiDeleteBinLine />
     </BorderButton>
   )
 }

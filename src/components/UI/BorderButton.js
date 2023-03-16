@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const StyledIconButton = styled.button`
+const StyledBorderButton = styled.button`
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
   border-radius: 8px;
@@ -26,6 +26,6 @@ const StyledIconButton = styled.button`
     `}
 `
 
-export function IconButton(props) {
-  return <StyledIconButton {...props}>{props.Icon}</StyledIconButton>
+export function BorderButton({ children, ...props }) {
+  return <StyledBorderButton {...props}>{children}</StyledBorderButton>
 }

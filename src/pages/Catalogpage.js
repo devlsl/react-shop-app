@@ -14,7 +14,7 @@ const CardsWrapper = styled.div`
   align-items: flex-start;
 `
 
-function Catalogpage() {
+export function Catalogpage() {
   const [items, setItems] = useState([])
 
   useEffect(() => {
@@ -43,5 +43,3 @@ function Catalogpage() {
     </CardsWrapper>
   )
 }
-
-export { Catalogpage }

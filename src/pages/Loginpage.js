@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { Button } from '../components/UI/Button'
 import { ColBox } from '../components/UI/ColBox'
@@ -41,7 +41,7 @@ const StatusBlock = styled.div`
 `
 
 const LoginInput = styled(Input)`
-  padding: 8px;
+  padding: 16px 10px;
 `
 
 const LoginButton = styled(Button)``

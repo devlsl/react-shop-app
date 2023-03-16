@@ -18,15 +18,21 @@ export function Header() {
     }
   }, [user, cartChangeTrigger, isOpen])
 
+  const userStorage = window.localStorage.getItem('user')
+
+  const needRenderHeader = userStorage && !user ? false : true
+  console.log('render Header')
+
   return (
     <RowBox padding="30px" style={{ borderBottom: '2px solid #f3f3f3' }}>
       <HeaderLogo />
 
-      {user ? (
-        <AuthorizedNav cartAccount={cartAccount} />
-      ) : (
-        <NonAuthorizedNav />
-      )}
+      {needRenderHeader &&
+        (user ? (
+          <AuthorizedNav cartAccount={cartAccount} />
+        ) : (
+          <NonAuthorizedNav />
+        ))}
     </RowBox>
   )
 }

@@ -20,11 +20,11 @@ const Overlay = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: 9;
   width: ${(props) => props.width || '400px'};
   background: ${(props) => props.background || 'white'};
-  border-radius: ${(props) => props.radius || '20px'};
+  /* border-radius: ${(props) => props.radius || '20px'}; */
   overflow: auto;
   box-shadow: ${(props) => props.shadow || 'rgba(0, 0, 0, 0.4) 0px 5px 15px'};
 

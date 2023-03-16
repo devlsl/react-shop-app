@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { createContext } from 'react'
 import { checkUser } from '../serverMethods/checkUser'
 
@@ -10,12 +10,15 @@ export function AuthProvider({ children }) {
   const signIn = async ({ phone, password }) => {
     const checkedUser = await checkUser(phone, password)
     setUser(checkedUser)
+    window.localStorage.setItem('user', checkedUser)
   }
 
   const signOut = (cb) => {
     setUser(null)
     cb()
   }
+
+  console.log('render')
 
   const value = { user, setUser, signIn, signOut }
 

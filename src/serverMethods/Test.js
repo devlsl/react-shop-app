@@ -1,51 +1,53 @@
-import { useEffect } from 'react'
-import { addToFavorites } from './addToFavorites'
-import { deleteFromFavorites } from './deleteFromFavorites'
-import { getFavorites } from './getFavorites'
-import { isThereItemInFavorites } from './isThereItemInFavorites'
-import { toggleToFavorites } from './toggleToFavorites'
+import styled from 'styled-components'
+import { Checkbox } from '../components/UI/CheckBox'
 
-export function Test() {
-  useEffect(() => {}, [])
+const CheckBoxWrapper = styled.label`
+  border: 2px solid #f3f3f3;
+  border-radius: 40px;
+  padding: 1rem;
+  display: flex;
 
-  const testing = async () => {
-    // isThereItemInFavorites
-    // console.log('expected true', await isThereItemInFavorites('3', '2'))
-    // console.log('expected false', await isThereItemInFavorites('3', '100'))
-    // console.log('expected false', await isThereItemInFavorites('123', '2'))
-    // addToFavorites
-    // console.log(await getFavorites('3'))
-    // await addToFavorites('3', '4')
-    // console.log(await getFavorites('3'))
-    // deleteFromFavorites
-    // console.log(await getFavorites('3'))
-    // await deleteFromFavorites('3', '4')
-    // console.log(await getFavorites('3'))
-    // toggleToFavorites
-    // console.log(await getFavorites('3'))
-    // await toggleToFavorites('3', '4')
-    // console.log(await getFavorites('3'))
-    // await toggleToFavorites('3', '4')
-    // console.log(await getFavorites('3'))
+  &:hover {
+    /* стили при наведении */
   }
 
+  &:active {
+    /* стили при нажатии */
+  }
+
+  &:has(input:checked) {
+    /* стили при выборе */
+  }
+`
+
+const Label = styled.label`
+  border: 2px solid red;
+`
+
+const submitFormHandle = (e) => {
+  e.preventDefault()
+  const values = Array.from(e.target.elements)
+    .filter((el) => el.type === 'checkbox')
+    .filter((el) => el.checked)
+    .map((el) => el.value)
+
+  console.log(values)
+}
+
+export function Test() {
   return (
-    <div
-      onClick={testing}
-      style={{
-        maxWidth: '100px',
-        maxHeight: '50px',
-        backgroundColor: 'orange',
-        border: '2px solid black',
-        textAlign: 'center',
-        cursor: 'pointer',
-        margin: '5px',
-        padding: '5px',
-        fontSize: '20px',
-        fontWeight: '600'
-      }}
-    >
-      TEST
+    <div className="border" style={{ width: '500px', height: '400px' }}>
+      <form onSubmit={submitFormHandle}>
+        <Checkbox Label={CheckBoxWrapper} checked={true} value="1">
+          <div>Пицца</div>
+        </Checkbox>
+        <Checkbox Label={CheckBoxWrapper} checked={true} value="qwe">
+          <div>Груша</div>
+        </Checkbox>
+        <div>sadsa</div>
+        <input />
+        <button type="submit">Заказать</button>
+      </form>
     </div>
   )
 }

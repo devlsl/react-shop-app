@@ -11,6 +11,8 @@ import { FavoritesProvider } from './hoc/FavoriteProvider'
 import { AuthProvider } from './hoc/AuthProvider'
 import { Test } from './serverMethods/Test'
 import { Favoreitespage } from './pages/Favoreitespage'
+import { CheckUserInStorage } from './hoc/CheckUserInStorage'
+import { ToLoginPage } from './hoc/ToLoginPage'
 
 const router = createBrowserRouter([
   {
@@ -39,11 +41,15 @@ const router = createBrowserRouter([
       },
       {
         path: 'login',
-        element: <Loginpage />
+        element: <ToLoginPage />
       },
       {
         path: 'favorites',
-        element: <Favoreitespage />
+        element: (
+          <RequireAuth>
+            <Favoreitespage />
+          </RequireAuth>
+        )
       },
       {
         path: 'test',
@@ -61,11 +67,13 @@ function App() {
   return (
     <>
       <AuthProvider>
-        <CartProvider>
-          <FavoritesProvider>
-            <RouterProvider router={router} />
-          </FavoritesProvider>
-        </CartProvider>
+        <CheckUserInStorage>
+          <CartProvider>
+            <FavoritesProvider>
+              <RouterProvider router={router} />
+            </FavoritesProvider>
+          </CartProvider>
+        </CheckUserInStorage>
       </AuthProvider>
     </>
   )

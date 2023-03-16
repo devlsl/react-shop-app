@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { useAuth } from '../../hooks/useAuth'
+import { useQtyItemInput } from '../../hooks/useQtyItemInput'
 import { AddToCartButton } from '../UI/AddToCartButton'
 import { AddToFavoritesButton } from '../UI/AddToFavoritesButton'
 import { CardWrapper } from '../UI/CardWrapper'
 import { ColBox } from '../UI/ColBox'
 import { RowBox } from '../UI/RowBox'
-import { useCatalogItemInput } from './hooks/useCatalogItemInput'
 
 const CatalogItemWrapper = styled(CardWrapper)`
   transition: box-shadow 0.2s ease-in-out;
@@ -19,7 +19,7 @@ const CatalogItemWrapper = styled(CardWrapper)`
 
 export function CatalogItem({ id, path, title, price, count }) {
   const { user } = useAuth()
-  const [qty, Input] = useCatalogItemInput(count)
+  const [qty, Input] = useQtyItemInput(count)
 
   return (
     <CatalogItemWrapper>

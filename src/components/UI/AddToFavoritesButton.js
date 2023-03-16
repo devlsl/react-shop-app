@@ -3,18 +3,19 @@ import { useFavorites } from '../../hooks/useFavorites'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
 import { isThereItemInFavorites } from '../../serverMethods/isThereItemInFavorites'
 import { toggleToFavorites } from '../../serverMethods/toggleToFavorites'
-import { IconButton } from '../UI/IconButton'
+import { BorderButton } from './BorderButton'
 
 export function AddToFavoritesButton({ userId, itemId }) {
   const { favoritesHasChanged } = useFavorites()
   const [isFavorite, setFavorite] = useState(false)
+
   useEffect(() => {
     if (userId) {
       isThereItemInFavorites(userId, itemId).then(setFavorite)
     } else {
       setFavorite(false)
     }
-  }, [])
+  }, [favoritesHasChanged])
 
   const onClick = async () => {
     await toggleToFavorites(userId, itemId)
@@ -25,9 +26,8 @@ export function AddToFavoritesButton({ userId, itemId }) {
   const color = isFavorite ? 'red' : ''
 
   return (
-    <IconButton
-      onClick={onClick}
-      Icon={<MdOutlineFavoriteBorder color={color} />}
-    />
+    <BorderButton onClick={onClick}>
+      <MdOutlineFavoriteBorder color={color} />
+    </BorderButton>
   )
 }

@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { catalogItemQtyFilter } from '../../../utils/utils'
-import { Input } from '../../UI/Input'
+import { Input } from '../components/UI/Input'
+import { itemQtyFilter } from '../utils/utils'
 
-export function useCatalogItemInput(initialValue = 1) {
+export function useQtyItemInput(initialValue = 1) {
   const [value, setValue] = useState(initialValue)
 
   // может отличаться
   const onChange = (e) => {
-    setValue(catalogItemQtyFilter(e.target.valueAsNumber, initialValue, 1, 9))
+    setValue(itemQtyFilter(e.target.valueAsNumber, initialValue, 1, 9))
   }
 
   const CatalogItemInput = (

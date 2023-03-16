@@ -8,7 +8,11 @@ export async function addToCart(userId, itemId, qty) {
   if (index === -1) {
     cart.push({ id: itemId, qty: qty })
   } else {
-    cart[index].qty += qty
+    if (cart[index].qty + qty > 9) {
+      cart[index].qty = 9
+    } else {
+      cart[index].qty += qty
+    }
   }
   await axios.patch(URL + `users/${userId}`, { cart })
 }

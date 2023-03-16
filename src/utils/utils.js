@@ -6,7 +6,7 @@ export function rangeFilter(num, lower, upper) {
   return num > upper ? upper : num < lower ? lower : num
 }
 
-export function catalogItemQtyFilter(qty, defaultQty, lower, upper) {
+export function itemQtyFilter(qty, defaultQty, lower, upper) {
   if (!qty) {
     return defaultQty
   }
@@ -19,6 +19,20 @@ export function catalogItemQtyFilter(qty, defaultQty, lower, upper) {
     ? lower
     : qtyLastDigit
 }
+
+// export function cartItemQtyFilter(qty, defaultQty, lower, upper) {
+//   if (!qty) {
+//     return defaultQty
+//   }
+
+//   const qtyLastDigit = qty % 10
+
+//   return qtyLastDigit > upper
+//     ? qtyLastDigit
+//     : qtyLastDigit < lower
+//     ? lower
+//     : qtyLastDigit
+// }
 
 export function cssJustify(prop) {
   switch (prop) {
