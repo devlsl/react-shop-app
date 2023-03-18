@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const StyledBorderButton = styled.button`
-  border: 1px solid #f2f2f2;
+  border: 2px solid rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   border-radius: 8px;
   cursor: pointer;
@@ -11,11 +11,15 @@ const StyledBorderButton = styled.button`
   height: 30px;
   width: 30px;
 
+  :active {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
   ${(props) =>
     !props.disabled &&
     css`
       &:hover {
-        background-color: #e6e6e6;
+        background-color: rgba(0, 0, 0, 0.06);
       }
     `}
 

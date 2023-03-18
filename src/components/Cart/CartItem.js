@@ -2,15 +2,16 @@ import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useAuth } from '../../hooks/useAuth'
 import { useQtyItemInput } from '../../hooks/useQtyItemInput'
+import { useTempCart } from '../../hooks/useTempCart'
 import { getItem } from '../../serverMethods/getItem'
 import { AddToFavoritesButton } from '../UI/AddToFavoritesButton'
 import { Checkbox } from '../UI/CheckBox'
 import { ColBox } from '../UI/ColBox'
-import { DeleteFromCartButton } from '../UI/DeleteFromCartButton'
 import { RowBox } from '../UI/RowBox'
+import { DeleteFromCartButton } from './DeleteFromCartButton'
 
 const StyledCartItem = styled.label`
-  border: 1px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   border-radius: 10px;
   padding: 0.2rem;
   transition: box-shadow 0.1s ease-in-out;
@@ -20,7 +21,9 @@ const StyledCartItem = styled.label`
     cursor: auto;
   }
 
-  input {
+  input,
+  button,
+  button * {
     cursor: pointer;
   }
 
@@ -47,19 +50,33 @@ const Label = ({ children }) => {
   )
 }
 
-export function CartItem({ id, initialQty }) {
+export function CartItem({ id, initialQty, initialChecked = false }) {
   const [item, setItem] = useState()
-  const [qty, Input] = useQtyItemInput(initialQty)
+  const [qty, QtyInput] = useQtyItemInput(initialQty)
   const { user } = useAuth()
+
+  const [checked, setChecked] = useState(initialChecked)
+  const onChangeChecked = () => setChecked((prev) => !prev)
 
   useEffect(() => {
     getItem(id).then(setItem)
   }, [])
 
+  const { setItemTempCart } = useTempCart()
+
+  useEffect(() => {
+    setItemTempCart(id, qty, checked)
+  }, [qty, checked])
+
   return (
     <>
       {item && (
-        <Checkbox key={id} Label={Label} checked={false} value={id}>
+        <Checkbox
+          Label={Label}
+          checked={checked}
+          onChange={onChangeChecked}
+          value={id}
+        >
           <img src={item.img} alt="item" width="70px" />
           <ColBox align="start" gap="10px">
             <ColBox align="start" gap="4px">
@@ -70,7 +87,7 @@ export function CartItem({ id, initialQty }) {
               </div>
             </ColBox>
             <RowBox gap="10px" justify="start">
-              {Input}
+              {QtyInput}
               <AddToFavoritesButton userId={user} itemId={item.id} />
               <DeleteFromCartButton userId={user} itemId={item.id} />
             </RowBox>

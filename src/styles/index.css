@@ -11,6 +11,18 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+input:focus {
+  outline: 2px solid rgb(173, 206, 255);
+  outline-offset: 1px;
+}
+a:focus,
+a:active,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
 .border {
   border: 1px solid red;
 }

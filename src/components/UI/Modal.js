@@ -25,7 +25,7 @@ const ContentWrapper = styled.div`
   width: ${(props) => props.width || '400px'};
   background: ${(props) => props.background || 'white'};
   /* border-radius: ${(props) => props.radius || '20px'}; */
-  overflow: auto;
+  overflow: hidden;
   box-shadow: ${(props) => props.shadow || 'rgba(0, 0, 0, 0.4) 0px 5px 15px'};
 
   ${(props) => {

@@ -4,7 +4,7 @@ import { useAuth } from '../../hooks/useAuth'
 import { RowBox } from '../UI/RowBox'
 import { NonBorderButton } from '../UI/NonBorderButton'
 
-export function SignOutButton({ cartAccount }) {
+export function SignOutButton() {
   const { signOut } = useAuth()
   const navigate = useNavigate()
 

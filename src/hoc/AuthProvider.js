@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { createContext } from 'react'
 import { checkUser } from '../serverMethods/checkUser'
 
@@ -17,8 +17,6 @@ export function AuthProvider({ children }) {
     setUser(null)
     cb()
   }
-
-  console.log('render')
 
   const value = { user, setUser, signIn, signOut }
 

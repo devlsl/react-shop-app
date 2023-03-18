@@ -30,8 +30,6 @@ const submitFormHandle = (e) => {
     .filter((el) => el.type === 'checkbox')
     .filter((el) => el.checked)
     .map((el) => el.value)
-
-  console.log(values)
 }
 
 export function Test() {

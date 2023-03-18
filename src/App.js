@@ -13,6 +13,7 @@ import { Test } from './serverMethods/Test'
 import { Favoreitespage } from './pages/Favoreitespage'
 import { CheckUserInStorage } from './hoc/CheckUserInStorage'
 import { ToLoginPage } from './hoc/ToLoginPage'
+import { TempCartProvider } from './hoc/TempCartProvider'
 
 const router = createBrowserRouter([
   {
@@ -70,7 +71,9 @@ function App() {
         <CheckUserInStorage>
           <CartProvider>
             <FavoritesProvider>
-              <RouterProvider router={router} />
+              <TempCartProvider>
+                <RouterProvider router={router} />
+              </TempCartProvider>
             </FavoritesProvider>
           </CartProvider>
         </CheckUserInStorage>

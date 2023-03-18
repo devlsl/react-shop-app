@@ -1,14 +1,14 @@
 import { useState } from 'react'
 
-export function Checkbox({ Label, children, checked = false, value }) {
-  const [isChecked, setChecked] = useState(checked)
+export function Checkbox({ Label, children, checked, onChange, value }) {
   return (
     <Label>
       <input
+        style={{ outline: 'none' }}
         type="checkbox"
-        checked={isChecked}
+        checked={checked}
         value={value}
-        onChange={() => setChecked((prev) => !prev)}
+        onChange={onChange}
       />
       {children}
     </Label>

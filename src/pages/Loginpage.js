@@ -151,7 +151,6 @@ export function Loginpage() {
               disabled={user ? true : false}
               value="signUp"
               type="submit"
-              tabIndex="1"
             >
               Зарегистрироваться
             </RegisterButton>

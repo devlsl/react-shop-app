@@ -5,7 +5,7 @@ import { CustomLink } from './CustomLink'
 import { OpenCartButton } from './OpenCartButton'
 import { SignOutButton } from './SignOutButton'
 
-export function AuthorizedNav({ cartAccount }) {
+export function AuthorizedNav({ cartPrice }) {
   return (
     <RowBox gap="50px">
       <RowBox gap="20px">
@@ -14,7 +14,7 @@ export function AuthorizedNav({ cartAccount }) {
       </RowBox>
 
       <RowBox gap="20px">
-        <OpenCartButton cartAccount={cartAccount} />
+        <OpenCartButton />
         <CustomLink to="orders">
           <HiOutlineUserCircle opacity={0.7} size={21} />
         </CustomLink>

@@ -5,7 +5,6 @@ import { itemQtyFilter } from '../utils/utils'
 export function useQtyItemInput(initialValue = 1) {
   const [value, setValue] = useState(initialValue)
 
-  // может отличаться
   const onChange = (e) => {
     setValue(itemQtyFilter(e.target.valueAsNumber, initialValue, 1, 9))
   }
