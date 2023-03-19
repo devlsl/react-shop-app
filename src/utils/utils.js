@@ -52,3 +52,25 @@ export function cssJustify(prop) {
       return 'space-between'
   }
 }
+
+export function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function randStr(alphabet, length) {
+  return Array.from(
+    { length: length },
+    (el) => alphabet[randInt(0, alphabet.length - 1)]
+  ).join('')
+}
+
+export function randTrack() {
+  return randStr('0123456789', 13)
+}
+
+export function randId() {
+  return randStr(
+    '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    7
+  )
+}

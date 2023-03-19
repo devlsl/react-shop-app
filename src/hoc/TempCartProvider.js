@@ -4,6 +4,7 @@ import { createContext } from 'react'
 export const TempCartContext = createContext(null)
 
 export function TempCartProvider({ children }) {
+  const [tempCartPrice, setTempCartPrice] = useState(0)
   const [tempCart, setTempCart] = useState(null)
   const setItemTempCart = (id, qty, checked) => {
     setTempCart((prev) =>
@@ -14,6 +15,8 @@ export function TempCartProvider({ children }) {
     setTempCart((prev) => prev.filter((el) => el.id !== id))
   }
   const value = {
+    tempCartPrice,
+    setTempCartPrice,
     tempCart,
     setTempCart,
     setItemTempCart,

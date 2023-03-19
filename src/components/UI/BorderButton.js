@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const StyledBorderButton = styled.button`
+const StyledBorderButton = styled.button.attrs({ type: 'button' })`
   border: 2px solid rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   border-radius: 8px;

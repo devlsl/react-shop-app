@@ -24,7 +24,8 @@
           "id": "1",
           "qty": 5
         }
-      ]
+      ],
+      "orders": []
     },
     {
       "id": "1",
@@ -51,12 +52,15 @@
         },
         {
           "id": "31"
+        },
+        {
+          "id": "1"
         }
       ],
       "cart": [
         {
-          "id": "13",
-          "qty": 1
+          "id": "0",
+          "qty": 2
         }
       ]
     },
@@ -301,16 +305,7 @@
     {
       "phone": "0",
       "password": "0",
-      "cart": [
-        {
-          "id": "0",
-          "qty": 1
-        },
-        {
-          "id": "1",
-          "qty": 1
-        }
-      ],
+      "cart": [],
       "favorites": [
         {
           "id": "12"
@@ -340,13 +335,61 @@
           "id": "3"
         },
         {
-          "id": "2"
+          "id": "0"
         },
         {
           "id": "1"
+        },
+        {
+          "id": "2"
         }
       ],
-      "orders": [],
+      "orders": [
+        {
+          "id": "124",
+          "amount": "124531",
+          "items": [
+            {
+              "id": "1",
+              "qty": 2
+            },
+            {
+              "id": "2",
+              "qty": 1
+            },
+            {
+              "id": "6",
+              "qty": 1
+            }
+          ],
+          "status": "доставлен",
+          "track": "9384758049582"
+        },
+        {
+          "id": "41",
+          "amount": "3134234",
+          "items": [
+            {
+              "id": "7",
+              "qty": 1
+            },
+            {
+              "id": "12",
+              "qty": 1
+            },
+            {
+              "id": "37",
+              "qty": 3
+            },
+            {
+              "id": "32",
+              "qty": 2
+            }
+          ],
+          "status": "в пути",
+          "track": "1428902948115"
+        }
+      ],
       "id": "9lDFAji"
     },
     {
@@ -377,6 +420,103 @@
       "favorites": [],
       "orders": [],
       "id": "tZE1nH6"
+    },
+    {
+      "phone": "00000",
+      "password": "00000",
+      "cart": [],
+      "favorites": [
+        {
+          "id": "31"
+        }
+      ],
+      "orders": [
+        {
+          "id": "81XUEi3",
+          "amount": 45990,
+          "items": [
+            {
+              "id": "2",
+              "qty": 1
+            }
+          ],
+          "status": "в обработке",
+          "track": "2830901545039"
+        },
+        {
+          "id": "NGSwvNP",
+          "amount": 45990,
+          "items": [
+            {
+              "id": "2",
+              "qty": 1
+            }
+          ],
+          "status": "в обработке",
+          "track": "4156115853700"
+        },
+        {
+          "id": "LpqTmIR",
+          "amount": 260970,
+          "items": [
+            {
+              "id": "30",
+              "qty": 3
+            }
+          ],
+          "status": "в обработке",
+          "track": "4444684631787"
+        },
+        {
+          "id": "sPvbuhQ",
+          "amount": 77990,
+          "items": [
+            {
+              "id": "1",
+              "qty": 1
+            }
+          ],
+          "status": "в обработке",
+          "track": "3304760602395"
+        },
+        {
+          "id": "nw3KiAQ",
+          "amount": 141990,
+          "items": [
+            {
+              "id": "31",
+              "qty": 1
+            }
+          ],
+          "status": "в обработке",
+          "track": "2669814607260"
+        },
+        {
+          "id": "F1TDIet",
+          "amount": 545930,
+          "items": [
+            {
+              "id": "1",
+              "qty": 7
+            }
+          ],
+          "status": "в обработке",
+          "track": "1272752923956"
+        },
+        {
+          "id": "XGXFKdF",
+          "amount": 131980,
+          "items": [
+            {
+              "id": "70",
+              "qty": 2
+            }
+          ],
+          "status": "в обработке",
+          "track": "4087256442395"
+        }
+      ],
+      "id": "CFa_EKc"
     }
   ],
   "items": [
@@ -680,6 +820,454 @@
       "category": "iphone",
       "price": 67990,
       "img": "https://images.biggeek.ru/1/435/a32d/18458-153Midnight.jpg"
+    },
+    {
+      "id": "43",
+      "title": "Apple MacBook Pro 16 MNW93 Space Gray (M2 Pro 12-Core, GPU 19-Core, 16GB, 1TB)",
+      "category": "macbook",
+      "price": 259990,
+      "img": "https://images.biggeek.ru/1/435/286c/19898-23016_Space%20Gray.jpeg"
+    },
+    {
+      "id": "44",
+      "title": "Apple MacBook Pro 14 MPHF3 Space Gray (M2 Pro 12-Core, GPU 19-Core, 16GB, 1TB)",
+      "category": "macbook",
+      "price": 244990,
+      "img": "https://images.biggeek.ru/1/435/a093/19892-64914_Space%20Gray.jpeg"
+    },
+    {
+      "id": "45",
+      "title": "Apple MacBook Pro 14 MPHF3 Space Gray (M2 Pro 12-Core, GPU 19-Core, 16GB, 1TB)",
+      "category": "macbook",
+      "price": 244990,
+      "img": "https://images.biggeek.ru/1/435/a093/19892-64914_Space%20Gray.jpeg"
+    },
+    {
+      "id": "46",
+      "title": "Apple iPad Pro 12.9\" (2022) 256GB Wi-Fi Space Gray",
+      "category": "ipad",
+      "price": 102990,
+      "img": "https://images.biggeek.ru/1/435/7ab8/19320-785129_SG_WIFI.png"
+    },
+    {
+      "id": "47",
+      "title": "Apple iPhone 14 Pro Max 128GB («Чёрный космос» | Space Black)",
+      "category": "iphone",
+      "price": 99990,
+      "img": "https://images.biggeek.ru/1/435/f525/18506-838Spaceblack.jpg"
+    },
+    {
+      "id": "48",
+      "title": "Apple iPhone 14 Pro 128GB («Чёрный космос» | Space Black)",
+      "category": "iphone",
+      "price": 91990,
+      "img": "https://images.biggeek.ru/1/435/54a2/18490-420Spaceblack.jpg"
+    },
+    {
+      "id": "49",
+      "title": "Apple iPhone 14 Plus 128GB («Сияющая звезда» | Starlight)",
+      "category": "iphone",
+      "price": 73990,
+      "img": "https://images.biggeek.ru/1/435/bf0a/18474-377Starlight.jpg"
+    },
+    {
+      "id": "50",
+      "title": "Apple iPhone 14 128GB («Сияющая звезда» | Starlight)",
+      "category": "iphone",
+      "price": 65990,
+      "img": "https://images.biggeek.ru/1/435/0013/18459-530Starlight.jpg"
+    },
+    {
+      "id": "51",
+      "title": "Apple MacBook Pro 13 Retina Touch Bar MNEP3 Silver (M2 8-Core GPU 10-Core, 8 Gb, 256 Gb)",
+      "category": "macbook",
+      "price": 116990,
+      "img": "https://images.biggeek.ru/1/435/e168/17338-95613015-17412706-14211804-378Silver_13_touch.jpeg"
+    },
+    {
+      "id": "52",
+      "title": "Apple iPad Air (2022) 64Gb Wi-Fi Starlight",
+      "category": "ipad",
+      "price": 52990,
+      "img": "https://images.biggeek.ru/1/435/95d5/16279-334Air5_wifi_starlight.jpg"
+    },
+    {
+      "id": "53",
+      "title": "Apple iPhone SE (2022) 64GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 34990,
+      "img": "https://images.biggeek.ru/1/435/a7d8/16273-40Productred.jpg"
+    },
+    {
+      "id": "54",
+      "title": "Apple iPhone 13 Pro Max 128GB (Графитовый | Graphite)",
+      "category": "iphone",
+      "price": 93990,
+      "img": "https://images.biggeek.ru/1/435/7898/14726-537Space.jpg"
+    },
+    {
+      "id": "55",
+      "title": "Apple iPhone 13 Pro 128GB (Графитовый | Graphite)",
+      "category": "iphone",
+      "price": 91990,
+      "img": "https://images.biggeek.ru/1/435/4f5d/14710-128Space.jpg"
+    },
+    {
+      "id": "56",
+      "title": "Apple iPad mini (2021) 64GB Wi-Fi Purple",
+      "category": "ipad",
+      "price": 46990,
+      "img": "https://images.biggeek.ru/1/435/0fb0/14741-38Mini_Purple.jpg"
+    },
+    {
+      "id": "57",
+      "title": "Apple iPhone 13 128GB («Тёмная ночь» | Midnight)",
+      "category": "iphone",
+      "price": 61990,
+      "img": "https://images.biggeek.ru/1/435/0caf/14694-384Midnight.jpg"
+    },
+    {
+      "id": "58",
+      "title": "Apple iPhone 13 mini 128GB («Сияющая звезда» | Starlight)",
+      "category": "iphone",
+      "price": 59990,
+      "img": "https://images.biggeek.ru/1/435/12a0/14680-720Starlight.jpg"
+    },
+    {
+      "id": "58",
+      "title": "Apple iPhone 13 mini 128GB («Сияющая звезда» | Starlight)",
+      "category": "iphone",
+      "price": 59990,
+      "img": "https://images.biggeek.ru/1/435/12a0/14680-720Starlight.jpg"
+    },
+    {
+      "id": "59",
+      "title": "Apple iPad Pro 12.9\" (2021) 128Gb Wi-Fi Silver",
+      "category": "ipad",
+      "price": 83990,
+      "img": "https://images.biggeek.ru/1/435/fbd6/13878-57111160-39812-wifi-silver.png"
+    },
+    {
+      "id": "60",
+      "title": "Apple iPhone 12 64GB (Синий | Blue)",
+      "category": "iphone",
+      "price": 48990,
+      "img": "https://images.biggeek.ru/1/435/faff/12429-255photo_2020-10-21%2015.13.21.jpeg"
+    },
+    {
+      "id": "61",
+      "title": "Apple iPhone 12 mini 64GB (Синий | Blue)",
+      "category": "iphone",
+      "price": 45990,
+      "img": "https://images.biggeek.ru/1/435/6992/12414-535bigeek_image3.jpeg"
+    },
+    {
+      "id": "62",
+      "title": "Apple iPhone SE (2020) 128GB (Чёрный | Black)",
+      "category": "iphone",
+      "price": 30990,
+      "img": "https://images.biggeek.ru/1/435/1582/11343-148black.jpeg"
+    },
+    {
+      "id": "63",
+      "title": "Apple iPhone 11 64GB (Белый | White)",
+      "category": "iphone",
+      "price": 41490,
+      "img": "https://images.biggeek.ru/1/435/f99d/9912-788bigeek_image8.jpeg"
+    },
+    {
+      "id": "64",
+      "title": "Наушники Apple AirPods (2-го поколения; 2019)",
+      "category": "airpods",
+      "price": 10490,
+      "img": "https://images.biggeek.ru/1/435/4e77/8484-6973204-4208485-433MR8U2-2.jpeg"
+    },
+    {
+      "id": "65",
+      "title": "Apple MacBook Pro 16 MNWD3 Silver (M2 Pro 12-Core, GPU 19-Core, 16GB, 1TB)",
+      "category": "macbook",
+      "price": 259990,
+      "img": "https://images.biggeek.ru/1/435/977d/19899-24216_Silver.jpeg"
+    },
+    {
+      "id": "66",
+      "title": "Apple Watch Ultra GPS + Cellular, 49mm, корпус из титана, ремешок Alpine цвета «сияющая звезда»",
+      "category": "watch",
+      "price": 68990,
+      "img": "https://images.biggeek.ru/1/435/3759/18670-521MQE53ref_VW_PF+watch-49-titanium-ultra_VW_PF_WF_CO+watch-face-49-alpine-ultra_VW_PF_WF_CO.jpeg"
+    },
+    {
+      "id": "67",
+      "title": "Apple iPhone 14 Pro Max 256GB (Тёмно-фиолетовый | Deep Purple)",
+      "category": "iphone",
+      "price": 111990,
+      "img": "https://images.biggeek.ru/1/435/2395/18507-808Deeppurple.jpg"
+    },
+    {
+      "id": "68",
+      "title": "Apple iPhone 14 Pro 256GB (Тёмно-фиолетовый | Deep Purple)",
+      "category": "iphone",
+      "price": 103990,
+      "img": "https://images.biggeek.ru/1/435/a25b/18491-412Deeppurple.jpg"
+    },
+    {
+      "id": "69",
+      "title": "Apple iPhone 14 Plus 128GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 73990,
+      "img": "https://images.biggeek.ru/1/435/a782/18475-668Red.jpg"
+    },
+    {
+      "id": "70",
+      "title": "Apple iPhone 14 128GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 65990,
+      "img": "https://images.biggeek.ru/1/435/a312/18460-762Red.jpg"
+    },
+    {
+      "id": "71",
+      "title": "Apple MacBook Air 13 Retina MLXY3 Silver (M2 8-Core, GPU 8-Core, 8 GB, 256 Gb)",
+      "category": "macbook",
+      "price": 105990,
+      "img": "https://images.biggeek.ru/1/435/4ca4/17242-729macbook-air-silver-gallery1-20220606.jpeg.jpg"
+    },
+    {
+      "id": "72",
+      "title": "Apple iPhone SE (2022) 128GB («Тёмная ночь» | Midnight)",
+      "category": "iphone",
+      "price": 37990,
+      "img": "https://images.biggeek.ru/1/435/55cc/16274-214Midnight.jpg"
+    },
+    {
+      "id": "73",
+      "title": "Apple Watch Series 7 GPS, 45mm, корпус из алюминия зелёного цвета, спортивный ремешок (Sport Band) цвета «зелёный клевер»",
+      "category": "watch",
+      "price": 33990,
+      "img": "https://images.biggeek.ru/1/435/a03a/15360-28415078-50015078.jpeg"
+    },
+    {
+      "id": "74",
+      "title": "Apple iPhone 13 Pro Max 256GB (Небесно-голубой | Sierra Blue)",
+      "category": "iphone",
+      "price": 102990,
+      "img": "https://images.biggeek.ru/1/435/692b/14727-750Blue.jpg"
+    },
+    {
+      "id": "75",
+      "title": "Apple iPhone 13 Pro 256GB (Небесно-голубой | Sierra Blue)",
+      "category": "iphone",
+      "price": 102990,
+      "img": "https://images.biggeek.ru/1/435/eb11/14711-433BLue.jpg"
+    },
+    {
+      "id": "76",
+      "title": "Apple iPhone 13 128GB («Сияющая звезда» | Starlight)",
+      "category": "iphone",
+      "price": 61990,
+      "img": "https://images.biggeek.ru/1/435/abaa/14695-353Starlight.jpg"
+    },
+    {
+      "id": "77",
+      "title": "Apple iPhone 12 64GB (Зелёный | Green)",
+      "category": "iphone",
+      "price": 48990,
+      "img": "https://images.biggeek.ru/1/435/aa3f/12430-862photo_2020-10-21%2015.13.17.jpeg"
+    },
+    {
+      "id": "78",
+      "title": "Apple iPhone 12 mini 64GB (Зелёный | Green)",
+      "category": "iphone",
+      "price": 43990,
+      "img": "https://images.biggeek.ru/1/435/c268/12415-828bigeek_image5.jpeg"
+    },
+    {
+      "id": "79",
+      "title": "Apple iMac 5K 27\" MXWV2 (2020) Core i7 3.8 Ghz, 8Gb, 512 Gb SSD, Radeon Pro 5500 XT 8Gb",
+      "category": "imac",
+      "price": 329990,
+      "img": "https://images.biggeek.ru/1/435/53ed/11924-7428457-62272019435x435.jpg"
+    },
+    {
+      "id": "80",
+      "title": "Apple iPhone 14 Pro Max 256GB (Золотой | Gold)",
+      "category": "iphone",
+      "price": 109990,
+      "img": "https://images.biggeek.ru/1/435/d9c0/18508-447Gold.jpg"
+    },
+    {
+      "id": "81",
+      "title": "Apple iPhone 14 Pro 256GB (Золотой | Gold)",
+      "category": "iphone",
+      "price": 104990,
+      "img": "https://images.biggeek.ru/1/435/0114/18492-864Gold.jpg"
+    },
+    {
+      "id": "82",
+      "title": "Наушники Apple AirPods Pro с зарядным футляром MagSafe (2-го поколения; 2022)",
+      "category": "airpods",
+      "price": 19990,
+      "img": "https://images.biggeek.ru/1/435/23c1/18518-503Airpodspro2.jpg"
+    },
+    {
+      "id": "83",
+      "title": "Apple iPhone 14 Plus 256GB (Синий | Blue)",
+      "category": "iphone",
+      "price": 79990,
+      "img": "https://images.biggeek.ru/1/435/5d11/18476-163Blue.jpg"
+    },
+    {
+      "id": "84",
+      "title": "Apple iPhone 14 256GB (Синий | Blue)",
+      "category": "iphone",
+      "price": 76990,
+      "img": "https://images.biggeek.ru/1/435/f297/18461-714Blue.jpg"
+    },
+    {
+      "id": "85",
+      "title": "Apple MacBook Pro 14 Z15H0007D Space Gray (M1 Max 10-Core, GPU 24-Core, 64GB, 1TB)",
+      "category": "macbook",
+      "price": 524990,
+      "img": "https://images.biggeek.ru/1/435/98fe/16370-60688169.jpeg"
+    },
+    {
+      "id": "86",
+      "title": "Apple iPhone SE (2022) 128GB («Сияющая звезда» | Starlight)",
+      "category": "iphone",
+      "price": 37990,
+      "img": "https://images.biggeek.ru/1/435/7657/16275-263Starlight.jpg"
+    },
+    {
+      "id": "87",
+      "title": "Apple iPhone 13 Pro Max 256GB (Серебристый | Silver)",
+      "category": "iphone",
+      "price": 102990,
+      "img": "https://images.biggeek.ru/1/435/6f90/14728-473Silver.jpg"
+    },
+    {
+      "id": "88",
+      "title": "Apple iPhone 13 128GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 61990,
+      "img": "https://images.biggeek.ru/1/435/aadd/14696-103Red.jpg"
+    },
+    {
+      "id": "89",
+      "title": "Apple iPhone 13 mini 256GB (Розовый | Pink)",
+      "category": "iphone",
+      "price": 69990,
+      "img": "https://images.biggeek.ru/1/435/f44b/14682-72Pink.jpg"
+    },
+    {
+      "id": "90",
+      "title": "Apple iPad Pro 12.9\" (2021) 256Gb Wi-Fi Space Gray)",
+      "category": "ipad",
+      "price": 91990,
+      "img": "https://images.biggeek.ru/1/435/e967/13880-93811156-42412-wifi-spacegray.png"
+    },
+    {
+      "id": "91",
+      "title": "Apple iPad Pro 11\" (2021) 256Gb Wi-Fi + Cellular Space Gray",
+      "category": "ipad",
+      "price": 86990,
+      "img": "https://images.biggeek.ru/1/435/3411/13861-25511148-64211-cell-spacegray.png"
+    },
+    {
+      "id": "92",
+      "title": "Apple iPhone 12 Pro Max 256GB (Графитовый | Graphite)",
+      "category": "iphone",
+      "price": 89990,
+      "img": "https://images.biggeek.ru/1/435/844b/12458-869bigeek_image1.jpeg"
+    },
+    {
+      "id": "93",
+      "title": "Apple iPhone 12 64GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 48990,
+      "img": "https://images.biggeek.ru/1/435/8ac3/12431-196photo_2020-10-21%2015.13.13.jpeg"
+    },
+    {
+      "id": "94",
+      "title": "Apple iPhone 12 mini 64GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 43990,
+      "img": "https://images.biggeek.ru/1/435/e72d/12416-13212426-698bigeek_image7.jpeg"
+    },
+    {
+      "id": "95",
+      "title": "Apple iPhone SE (2020) 128GB (PRODUCT)RED",
+      "category": "iphone",
+      "price": 30990,
+      "img": "https://images.biggeek.ru/1/435/4512/11344-658red.jpegeg"
+    },
+    {
+      "id": "96",
+      "title": "Apple iMac 5K 27\" MXWU2 (2020) Core i5 3.3 Ghz, 8Gb, 512 Gb SSD, Radeon Pro 5300 4Gb",
+      "category": "imac",
+      "price": 209990,
+      "img": "https://images.biggeek.ru/1/435/de7d/11923-5168457-62272019435x435.jpg"
+    },
+    {
+      "id": "97",
+      "title": "Apple Watch Ultra GPS + Cellular, 49mm, корпус из титана, ремешок Ocean цвета «Тёмная ночь»",
+      "category": "watch",
+      "price": 75990,
+      "img": "https://images.biggeek.ru/1/435/5836/18672-549MQEE3_VW_PF+watch-49-titanium-ultra_VW_PF_WF_CO+watch-face-49-ocean-ultra_VW_PF_WF_CO.jpeg"
+    },
+    {
+      "id": "98",
+      "title": "Apple Watch SE, 44mm, корпус из алюминия цвета «сияющая звезда», спортивный ремешок (Sport Band) цвета «сияющая звезда» (2022)",
+      "category": "watch",
+      "price": 27990,
+      "img": "https://images.biggeek.ru/1/435/0996/18661-66918661.jpg"
+    },
+    {
+      "id": "99",
+      "title": "Apple iPhone 14 Plus 256GB (Фиолетовый | Purple)",
+      "category": "iphone",
+      "price": 82990,
+      "img": "https://images.biggeek.ru/1/435/ade5/18477-176Purple.jpg"
+    },
+    {
+      "id": "100",
+      "title": "Apple iPhone 14 256GB (Фиолетовый | Purple)",
+      "category": "iphone",
+      "price": 76990,
+      "img": "https://images.biggeek.ru/1/435/6f48/18462-309Purple.jpg"
+    },
+    {
+      "id": "101",
+      "title": "Apple MacBook Pro 14 Z15H0007J Space Gray (M1 Max 10-Core, GPU 24-Core, 64GB, 2TB)",
+      "category": "macbook",
+      "price": 579990,
+      "img": "https://images.biggeek.ru/1/435/ae4d/16371-44088169.jpeg"
+    },
+    {
+      "id": "102",
+      "title": "Apple MacBook Pro 16 Z14V0008F Space Gray (M1 Max 10-Core, GPU 32-Core, 32GB, 512GB)",
+      "category": "macbook",
+      "price": 324990,
+      "img": "https://images.biggeek.ru/1/435/f106/15884-64615347-37916_space_BG.jpeg"
+    },
+    {
+      "id": "103",
+      "title": "Apple MacBook Pro 16 Z14V0008D Space Gray (M1 Pro 10-Core, GPU 16-Core, 32GB, 512GB)",
+      "category": "macbook",
+      "price": 399990,
+      "img": "https://images.biggeek.ru/1/435/1020/15883-50315347-37916_space_BG.jpeg"
+    },
+    {
+      "id": "104",
+      "title": "Apple iPad mini (2021) 256GB Wi-Fi Pink",
+      "category": "ipad",
+      "price": 71990,
+      "img": "https://images.biggeek.ru/1/435/89d8/14744-823Mini_Pink.jpg"
+    },
+    {
+      "id": "105",
+      "title": "Apple iPad 10.2\" (2021) 64GB Wi-Fi + Cellular Silver",
+      "category": "ipad",
+      "price": 41990,
+      "img": "https://images.biggeek.ru/1/435/8f85/14760-256Silver_Cell.jpg"
     }
   ]
 }

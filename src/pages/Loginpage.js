@@ -44,9 +44,9 @@ const LoginInput = styled(Input)`
   padding: 16px 10px;
 `
 
-const LoginButton = styled(Button)``
+const LoginButton = styled(Button).attrs({ type: 'submit' })``
 
-const RegisterButton = styled(Button)`
+const RegisterButton = styled(Button).attrs({ type: 'submit' })`
   background: rgba(211, 214, 0, 0.6);
 
   :hover {
@@ -147,18 +147,10 @@ export function Loginpage() {
             )}
           </ColBox>
           <ColBox gap="12px">
-            <RegisterButton
-              disabled={user ? true : false}
-              value="signUp"
-              type="submit"
-            >
+            <RegisterButton disabled={user ? true : false} value="signUp">
               Зарегистрироваться
             </RegisterButton>
-            <LoginButton
-              disabled={user ? true : false}
-              value="signIn"
-              type="submit"
-            >
+            <LoginButton disabled={user ? true : false} value="signIn">
               Войти
             </LoginButton>
           </ColBox>

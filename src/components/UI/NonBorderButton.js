@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const NonBorderButton = styled.button`
+export const NonBorderButton = styled.button.attrs({ type: 'button' })`
   cursor: pointer;
   display: flex;
   justify-content: center;

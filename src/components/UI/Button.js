@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
+export const Button = styled.button.attrs({ type: 'button' })`
   background: rgba(0, 0, 0, 0.2);
   color: white;
   border-radius: 5px;
@@ -15,5 +15,8 @@ export const Button = styled.button`
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     top: 1px;
+    :disabled {
+      top: 0px;
+    }
   }
 `

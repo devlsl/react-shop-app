@@ -30,7 +30,7 @@ export function CatalogItem({ id, path, title, price, count }) {
           <div>{title}</div>
           <div>
             <b>Цена: </b>
-            {price * qty} руб.
+            {(price * qty).toLocaleString()} руб.
           </div>
         </ColBox>
 

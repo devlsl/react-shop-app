@@ -5,6 +5,7 @@ import { calcItemsPrice } from '../../serverMethods/calcItemsPrice'
 import { useState, useEffect } from 'react'
 import { ColBox } from '../UI/ColBox'
 import { Button } from '../UI/Button'
+import { useCart } from '../../hooks/useCart'
 
 const StyledCartFooter = styled.div`
   position: absolute;
@@ -26,11 +27,20 @@ const DashedLine = styled.div`
   height: 13px;
 `
 
-const OrderButton = styled(Button)`
+const OrderButton = styled(Button).attrs({ type: 'submit' })`
   width: 100%;
   background-color: #a7d867;
   border-radius: 10px;
   font-size: 20px;
+
+  :disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    :active,
+    :hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      cursor: auto;
+    }
+  }
 
   :hover {
     background-color: #97bf63;
@@ -42,15 +52,19 @@ const OrderButton = styled(Button)`
 `
 
 export function CartFooter() {
-  const { tempCart } = useTempCart()
+  const { tempCart, tempCartPrice, setTempCartPrice } = useTempCart()
 
-  const [tempCartPrice, setTempCartPrice] = useState(0)
   useEffect(() => {
     if (tempCart) {
       calcItemsPrice(tempCart.filter((item) => item.checked)).then(
         setTempCartPrice
       )
     }
+  }, [tempCart])
+
+  const [tempCartIsEmpty, setTempCartIsEmpty] = useState(true)
+  useEffect(() => {
+    setTempCartIsEmpty(!tempCart?.filter((item) => item.checked).length)
   }, [tempCart])
 
   return (
@@ -60,10 +74,10 @@ export function CartFooter() {
           <div style={{ fontWeight: '400', fontSize: '18px' }}>Итого:</div>
           <DashedLine />
           <div style={{ fontWeight: '500', fontSize: '18px' }}>
-            {tempCartPrice || 0} руб.
+            {tempCartPrice.toLocaleString() || 0} руб.
           </div>
         </RowBox>
-        <OrderButton type="submit">Заказать</OrderButton>
+        <OrderButton disabled={tempCartIsEmpty}>Заказать</OrderButton>
       </ColBox>
     </StyledCartFooter>
   )

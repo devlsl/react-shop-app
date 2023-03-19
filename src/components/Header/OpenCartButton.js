@@ -21,7 +21,7 @@ export function OpenCartButton() {
     <NonBorderButton onClick={openCart}>
       <RowBox gap="4px">
         <RiShoppingCart2Line opacity={0.7} size={21} />
-        <span>{cartPrice || 0} руб.</span>
+        <span>{cartPrice.toLocaleString() || 0} руб.</span>
       </RowBox>
     </NonBorderButton>
   )

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useAuth } from '../../hooks/useAuth'
+import { useCart } from '../../hooks/useCart'
 import { useQtyItemInput } from '../../hooks/useQtyItemInput'
 import { useTempCart } from '../../hooks/useTempCart'
 import { getItem } from '../../serverMethods/getItem'
@@ -23,7 +25,8 @@ const StyledCartItem = styled.label`
 
   input,
   button,
-  button * {
+  button *,
+  img {
     cursor: pointer;
   }
 
@@ -68,6 +71,8 @@ export function CartItem({ id, initialQty, initialChecked = false }) {
     setItemTempCart(id, qty, checked)
   }, [qty, checked])
 
+  const { closeCart } = useCart()
+
   return (
     <>
       {item && (
@@ -77,13 +82,16 @@ export function CartItem({ id, initialQty, initialChecked = false }) {
           onChange={onChangeChecked}
           value={id}
         >
-          <img src={item.img} alt="item" width="70px" />
+          {/* доработать  */}
+          <Link onClick={closeCart} to="tracking">
+            <img src={item.img} alt="item" width="70px" />
+          </Link>
           <ColBox align="start" gap="10px">
             <ColBox align="start" gap="4px">
               <div>{item.title}</div>
               <div>
                 <b>Цена: </b>
-                {item.price * qty} руб.
+                {(item.price * qty).toLocaleString()} руб.
               </div>
             </ColBox>
             <RowBox gap="10px" justify="start">
