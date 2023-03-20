@@ -314,31 +314,7 @@
           "id": "13"
         },
         {
-          "id": "19"
-        },
-        {
-          "id": "20"
-        },
-        {
-          "id": "18"
-        },
-        {
           "id": "4"
-        },
-        {
-          "id": "37"
-        },
-        {
-          "id": "36"
-        },
-        {
-          "id": "3"
-        },
-        {
-          "id": "0"
-        },
-        {
-          "id": "1"
         },
         {
           "id": "2"
@@ -346,48 +322,112 @@
       ],
       "orders": [
         {
-          "id": "124",
-          "amount": "124531",
+          "id": "sCernoh",
+          "amount": 184760,
           "items": [
             {
               "id": "1",
-              "qty": 2
-            },
-            {
-              "id": "2",
               "qty": 1
             },
+            {
+              "id": "7",
+              "qty": 1
+            }
+          ],
+          "status": "в обработке",
+          "track": "9994952784247",
+          "date": "1679263809680"
+        },
+        {
+          "id": "VLWLWWN",
+          "amount": 141990,
+          "items": [
+            {
+              "id": "6",
+              "qty": 1
+            }
+          ],
+          "status": "получен",
+          "track": "3865713712681",
+          "date": "1679263864216"
+        },
+        {
+          "id": "das3rgr",
+          "amount": 141990,
+          "items": [
             {
               "id": "6",
               "qty": 1
             }
           ],
           "status": "доставлен",
-          "track": "9384758049582"
+          "track": "3865713712681",
+          "date": "1679263864216"
         },
         {
-          "id": "41",
-          "amount": "3134234",
+          "id": "i3ig320",
+          "amount": 141990,
           "items": [
             {
-              "id": "7",
+              "id": "6",
               "qty": 1
-            },
-            {
-              "id": "12",
-              "qty": 1
-            },
-            {
-              "id": "37",
-              "qty": 3
-            },
-            {
-              "id": "32",
-              "qty": 2
             }
           ],
-          "status": "в пути",
-          "track": "1428902948115"
+          "status": "доставлен",
+          "track": "3865713712681",
+          "date": "1679263864216"
+        },
+        {
+          "id": "foa9Jd0",
+          "amount": 141990,
+          "items": [
+            {
+              "id": "6",
+              "qty": 1
+            }
+          ],
+          "status": "получен",
+          "track": "3865713712681",
+          "date": "1679263864216"
+        },
+        {
+          "id": "fji93JK",
+          "amount": 141990,
+          "items": [
+            {
+              "id": "6",
+              "qty": 1
+            }
+          ],
+          "status": "отклонён",
+          "track": "3865713712681",
+          "date": "1679263864216"
+        },
+        {
+          "id": "cFavLLt",
+          "amount": 77990,
+          "items": [
+            {
+              "id": "3",
+              "qty": 1
+            }
+          ],
+          "status": "в обработке",
+          "track": "6430257103249",
+          "date": "1679343642082"
+        },
+        {
+          "id": "M1IkQzE",
+          "amount": 233970,
+          "items": [
+            {
+              "id": "1",
+              "qty": 3
+            }
+          ],
+          "status": "в обработке",
+          "track": "9194434641710",
+          "date": "1679344086135"
         }
       ],
       "id": "9lDFAji"
@@ -432,7 +472,7 @@
       ],
       "orders": [
         {
-          "id": "81XUEi3",
+          "id": "dxnPfv4",
           "amount": 45990,
           "items": [
             {
@@ -441,34 +481,72 @@
             }
           ],
           "status": "в обработке",
-          "track": "2830901545039"
+          "track": "3755152013854",
+          "date": "1679245548895"
+        }
+      ],
+      "id": "CFa_EKc"
+    },
+    {
+      "phone": "89304022543",
+      "password": "123",
+      "cart": [
+        {
+          "id": "6",
+          "qty": 1
+        }
+      ],
+      "favorites": [
+        {
+          "id": "5"
         },
         {
-          "id": "NGSwvNP",
-          "amount": 45990,
+          "id": "1"
+        },
+        {
+          "id": "0"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "orders": [
+        {
+          "id": "bCeGQ3A",
+          "amount": 36990,
           "items": [
             {
-              "id": "2",
+              "id": "4",
               "qty": 1
             }
           ],
           "status": "в обработке",
-          "track": "4156115853700"
+          "track": "3854623999698",
+          "date": "1679336139722"
+        }
+      ],
+      "id": "KhqcLaX"
+    },
+    {
+      "phone": "892012312312",
+      "password": "123",
+      "cart": [
+        {
+          "id": "0",
+          "qty": 1
+        }
+      ],
+      "favorites": [
+        {
+          "id": "0"
         },
         {
-          "id": "LpqTmIR",
-          "amount": 260970,
-          "items": [
-            {
-              "id": "30",
-              "qty": 3
-            }
-          ],
-          "status": "в обработке",
-          "track": "4444684631787"
-        },
+          "id": "1"
+        }
+      ],
+      "orders": [
         {
-          "id": "sPvbuhQ",
+          "id": "MkhL7Id",
           "amount": 77990,
           "items": [
             {
@@ -477,46 +555,11 @@
             }
           ],
           "status": "в обработке",
-          "track": "3304760602395"
-        },
-        {
-          "id": "nw3KiAQ",
-          "amount": 141990,
-          "items": [
-            {
-              "id": "31",
-              "qty": 1
-            }
-          ],
-          "status": "в обработке",
-          "track": "2669814607260"
-        },
-        {
-          "id": "F1TDIet",
-          "amount": 545930,
-          "items": [
-            {
-              "id": "1",
-              "qty": 7
-            }
-          ],
-          "status": "в обработке",
-          "track": "1272752923956"
-        },
-        {
-          "id": "XGXFKdF",
-          "amount": 131980,
-          "items": [
-            {
-              "id": "70",
-              "qty": 2
-            }
-          ],
-          "status": "в обработке",
-          "track": "4087256442395"
+          "track": "4933426545994",
+          "date": "1679336654067"
         }
       ],
-      "id": "CFa_EKc"
+      "id": "YMMp2xA"
     }
   ],
   "items": [
@@ -934,13 +977,6 @@
       "img": "https://images.biggeek.ru/1/435/12a0/14680-720Starlight.jpg"
     },
     {
-      "id": "58",
-      "title": "Apple iPhone 13 mini 128GB («Сияющая звезда» | Starlight)",
-      "category": "iphone",
-      "price": 59990,
-      "img": "https://images.biggeek.ru/1/435/12a0/14680-720Starlight.jpg"
-    },
-    {
       "id": "59",
       "title": "Apple iPad Pro 12.9\" (2021) 128Gb Wi-Fi Silver",
       "category": "ipad",
@@ -1197,7 +1233,7 @@
       "title": "Apple iPhone SE (2020) 128GB (PRODUCT)RED",
       "category": "iphone",
       "price": 30990,
-      "img": "https://images.biggeek.ru/1/435/4512/11344-658red.jpegeg"
+      "img": "https://images.biggeek.ru/1/435/4512/11344-658red.jpeg"
     },
     {
       "id": "96",

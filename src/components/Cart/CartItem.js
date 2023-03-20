@@ -82,7 +82,6 @@ export function CartItem({ id, initialQty, initialChecked = false }) {
           onChange={onChangeChecked}
           value={id}
         >
-          {/* доработать  */}
           <Link onClick={closeCart} to="tracking">
             <img src={item.img} alt="item" width="70px" />
           </Link>
