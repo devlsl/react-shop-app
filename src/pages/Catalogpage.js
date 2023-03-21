@@ -2,19 +2,10 @@ import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { CatalogItem } from '../components/CatalogItem/CatalogItem'
 import { CatalogItemSkeleton } from '../components/CatalogItem/CatalogItemSkeleton'
+import { CardsWrapper } from '../components/UI/CardsWrapper'
 import { useAuth } from '../hooks/useAuth'
 import { getFavorites } from '../serverMethods/getFavorites'
 import { getItems } from '../serverMethods/getItems'
-
-const CardsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 60px 30px;
-  row-gap: 60px;
-  justify-content: space-evenly;
-  align-items: flex-start;
-`
 
 export function Catalogpage() {
   const [items, setItems] = useState([])

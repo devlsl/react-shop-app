@@ -17,7 +17,7 @@ const CatalogItemWrapper = styled(CardWrapper)`
   }
 `
 
-export function CatalogItem({ id, path, title, price, count }) {
+export function CatalogItem({ id, path, title, price, count = 1 }) {
   const { user } = useAuth()
   const [qty, Input] = useQtyItemInput(count)
 
