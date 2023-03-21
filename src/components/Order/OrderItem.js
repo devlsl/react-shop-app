@@ -26,7 +26,7 @@ export function OrderItem(props) {
             <div>{qty}</div>
             <div>x</div>
           </RowBox>
-          <Link to="tracking">
+          <Link to={`/${id}`}>
             <img src={item.img} alt="item" width="70px" />
           </Link>
           <ColBox align="start" gap="10px">

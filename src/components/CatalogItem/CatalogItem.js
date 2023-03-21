@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useAuth } from '../../hooks/useAuth'
 import { useQtyItemInput } from '../../hooks/useQtyItemInput'
@@ -24,7 +25,9 @@ export function CatalogItem({ id, path, title, price, count = 1 }) {
   return (
     <CatalogItemWrapper>
       <ColBox gap="18px" padding="0 0 4px 0">
-        <img src={path} alt="item" />
+        <Link to={`/${id}`}>
+          <img src={path} alt="item" />
+        </Link>
 
         <ColBox width="90%" gap="8px" align="start">
           <div>{title}</div>

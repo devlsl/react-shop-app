@@ -305,8 +305,23 @@
     {
       "phone": "0",
       "password": "0",
-      "cart": [],
-      "favorites": [],
+      "cart": [
+        {
+          "id": "55",
+          "qty": 3
+        }
+      ],
+      "favorites": [
+        {
+          "id": "55"
+        },
+        {
+          "id": "1"
+        },
+        {
+          "id": "0"
+        }
+      ],
       "orders": [
         {
           "id": "sCernoh",

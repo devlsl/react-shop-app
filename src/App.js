@@ -14,6 +14,7 @@ import { Favoreitespage } from './pages/Favoreitespage'
 import { CheckUserInStorage } from './hoc/CheckUserInStorage'
 import { ToLoginPage } from './hoc/ToLoginPage'
 import { TempCartProvider } from './hoc/TempCartProvider'
+import { ItemPage } from './pages/ItemPage'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Catalogpage />
+      },
+      {
+        path: ':id',
+        element: <ItemPage />
       },
       {
         path: 'tracking',

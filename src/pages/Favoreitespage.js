@@ -4,6 +4,7 @@ import { CatalogItem } from '../components/CatalogItem/CatalogItem'
 import { CatalogItemSkeleton } from '../components/CatalogItem/CatalogItemSkeleton'
 import { CardsWrapper } from '../components/UI/CardsWrapper'
 import { ColBox } from '../components/UI/ColBox'
+import { RowBox } from '../components/UI/RowBox'
 import { useAuth } from '../hooks/useAuth'
 import { useFavorites } from '../hooks/useFavorites'
 import { getFavorites } from '../serverMethods/getFavorites'
@@ -46,11 +47,18 @@ export function Favoreitespage() {
     <>
       {favorites ? (
         favorites.length ? (
-          <CardsWrapper>
-            {favorites.map((item) => (
-              <FavoriteItem key={item.id} item={item} />
-            ))}
-          </CardsWrapper>
+          <ColBox padding="50px 0" gap="10px">
+            <RowBox padding="0 40px" justify="start" width="100%" gap="20px">
+              <span style={{ fontSize: '30px', fontWeight: '500' }}>
+                Избранные
+              </span>
+            </RowBox>
+            <CardsWrapper padding="30px 40px">
+              {favorites.map((item) => (
+                <FavoriteItem key={item.id} item={item} />
+              ))}
+            </CardsWrapper>
+          </ColBox>
         ) : (
           <ColBox height="75vh" width="100%" justify="center">
             <ColBox gap="20px">
@@ -61,24 +69,11 @@ export function Favoreitespage() {
         )
       ) : (
         <>
-          {[...Array(9).keys()].map((i) => (
+          {/* {[...Array(9).keys()].map((i) => (
             <CatalogItemSkeleton key={i} />
-          ))}
+          ))} */}
         </>
       )}
     </>
   )
-}
-
-{
-  /* {favorites ? <ColBox height="70%">fdsf</ColBox> : <ColBox>fdsf</ColBox>} }
-      { {favorites.length !== 0 ? (
-        favorites.map((item) => <FavoriteItem key={item.id} item={item} />)
-      ) : (
-        <>
-          {[...Array(9).keys()].map((i) => (
-            <CatalogItemSkeleton key={i} />
-          ))}
-        </>
-      )} */
 }
