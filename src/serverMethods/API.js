@@ -1,1 +1,1 @@
-export const URL = 'https://react-shop-server-seven.vercel.app/'
+export const URL = 'http://localhost:8000/'
